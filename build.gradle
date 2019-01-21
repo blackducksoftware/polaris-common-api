@@ -13,4 +13,5 @@ apply plugin: 'com.blackducksoftware.integration.library'
 
 dependencies {
     implementation 'com.blackducksoftware.integration:integration-common:15.1.0'
+    implementation 'io.swagger:swagger-annotations:1.5.21'
 }
