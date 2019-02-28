@@ -1,5 +1,5 @@
-/*
- * Common Object Service - Navigation
+/**
+ * polaris-common-api
  *
  * Copyright (C) 2019 Black Duck Software, Inc.
  * http://www.blackducksoftware.com/
@@ -21,7 +21,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 package com.synopsys.integration.polaris.common.api;
 
 import com.synopsys.integration.util.Stringable;
