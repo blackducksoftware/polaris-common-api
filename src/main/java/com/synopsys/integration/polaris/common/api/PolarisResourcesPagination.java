@@ -21,7 +21,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
@@ -42,7 +42,7 @@ import java.math.BigDecimal;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ResourcesPagination extends PolarisComponent {
+public class PolarisResourcesPagination extends PolarisComponent {
     @SerializedName("offset")
     private BigDecimal offset;
 

@@ -26,6 +26,7 @@ package com.synopsys.integration.polaris.common.api.common;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisResourcesPagination;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +41,7 @@ public class ToolV0Resources extends PolarisComponent {
     private LinksPagination links = null;
 
     @SerializedName("meta")
-    private ResourcesPagination meta = null;
+    private PolarisResourcesPagination meta = null;
 
     public ToolV0Resources addDataItem(final ToolV0 dataItem) {
         this.data.add(dataItem);
@@ -75,11 +76,11 @@ public class ToolV0Resources extends PolarisComponent {
      * Get meta
      * @return meta
      */
-    public ResourcesPagination getMeta() {
+    public PolarisResourcesPagination getMeta() {
         return meta;
     }
 
-    public void setMeta(final ResourcesPagination meta) {
+    public void setMeta(final PolarisResourcesPagination meta) {
         this.meta = meta;
     }
 

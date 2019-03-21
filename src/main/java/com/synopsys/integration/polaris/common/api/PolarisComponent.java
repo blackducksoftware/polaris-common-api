@@ -45,4 +45,5 @@ public class PolarisComponent extends Stringable implements Serializable {
     public void setJson(final String json) {
         this.json = json;
     }
+
 }

@@ -26,34 +26,53 @@ package com.synopsys.integration.polaris.common.api.auth;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisResources;
+import com.synopsys.integration.polaris.common.api.PolarisResourcesPagination;
 
-import java.util.ArrayList;
 import java.util.List;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class UserResources extends PolarisComponent {
+public class UserResources extends PolarisResources<User> {
     @SerializedName("data")
     private List<User> data = null;
-
-    public UserResources addDataItem(final User dataItem) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(dataItem);
-        return this;
-    }
+    @SerializedName("included")
+    private List<PolarisComponent> included;
+    @SerializedName("meta")
+    private PolarisResourcesPagination meta = null;
 
     /**
      * Get data
      * @return data
      */
+    @Override
     public List<User> getData() {
         return data;
     }
 
+    @Override
     public void setData(final List<User> data) {
         this.data = data;
+    }
+
+    @Override
+    public List<PolarisComponent> getIncluded() {
+        return included;
+    }
+
+    @Override
+    public void setIncluded(final List<PolarisComponent> included) {
+        this.included = included;
+    }
+
+    @Override
+    public PolarisResourcesPagination getMeta() {
+        return meta;
+    }
+
+    @Override
+    public void setMeta(final PolarisResourcesPagination meta) {
+        this.meta = meta;
     }
 
 }
