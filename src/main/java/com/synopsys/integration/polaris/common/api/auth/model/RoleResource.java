@@ -21,67 +21,28 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
-
-import java.util.ArrayList;
-import java.util.List;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class RunV0Resources extends PolarisComponent {
+public class RoleResource extends PolarisComponent {
     @SerializedName("data")
-    private List<RunV0> data = new ArrayList<>();
-
-    @SerializedName("links")
-    private LinksPagination links = null;
-
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
-
-    public RunV0Resources addDataItem(final RunV0 dataItem) {
-        this.data.add(dataItem);
-        return this;
-    }
+    private Role data = null;
 
     /**
      * Get data
      * @return data
      */
-    public List<RunV0> getData() {
+    public Role getData() {
         return data;
     }
 
-    public void setData(final List<RunV0> data) {
+    public void setData(final Role data) {
         this.data = data;
-    }
-
-    /**
-     * Get links
-     * @return links
-     */
-    public LinksPagination getLinks() {
-        return links;
-    }
-
-    public void setLinks(final LinksPagination links) {
-        this.links = links;
-    }
-
-    /**
-     * Get meta
-     * @return meta
-     */
-    public PolarisResourcesPagination getMeta() {
-        return meta;
-    }
-
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
     }
 
 }

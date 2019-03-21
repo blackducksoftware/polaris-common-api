@@ -21,67 +21,75 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class RunV0Resources extends PolarisComponent {
-    @SerializedName("data")
-    private List<RunV0> data = new ArrayList<>();
+public class LicenseJsonApi extends PolarisComponent {
+    @SerializedName("attributes")
+    private LicenseJsonApiAttributes attributes = null;
 
-    @SerializedName("links")
-    private LinksPagination links = null;
+    @SerializedName("id")
+    private UUID id;
 
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
+    @SerializedName("relationships")
+    private LicenseJsonApiRelationships relationships = null;
 
-    public RunV0Resources addDataItem(final RunV0 dataItem) {
-        this.data.add(dataItem);
-        return this;
+    @SerializedName("type")
+    private String type;
+
+    /**
+     * Get attributes
+     * @return attributes
+     */
+    public LicenseJsonApiAttributes getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(final LicenseJsonApiAttributes attributes) {
+        this.attributes = attributes;
     }
 
     /**
-     * Get data
-     * @return data
+     * Get id
+     * @return id
      */
-    public List<RunV0> getData() {
-        return data;
+    public UUID getId() {
+        return id;
     }
 
-    public void setData(final List<RunV0> data) {
-        this.data = data;
+    public void setId(final UUID id) {
+        this.id = id;
     }
 
     /**
-     * Get links
-     * @return links
+     * Get relationships
+     * @return relationships
      */
-    public LinksPagination getLinks() {
-        return links;
+    public LicenseJsonApiRelationships getRelationships() {
+        return relationships;
     }
 
-    public void setLinks(final LinksPagination links) {
-        this.links = links;
+    public void setRelationships(final LicenseJsonApiRelationships relationships) {
+        this.relationships = relationships;
     }
 
     /**
-     * Get meta
-     * @return meta
+     * Get type
+     * @return type
      */
-    public PolarisResourcesPagination getMeta() {
-        return meta;
+    public String getType() {
+        return type;
     }
 
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
+    public void setType(final String type) {
+        this.type = type;
     }
 
 }

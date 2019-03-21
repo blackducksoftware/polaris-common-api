@@ -21,67 +21,51 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
 
 import java.util.ArrayList;
 import java.util.List;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class RunV0Resources extends PolarisComponent {
-    @SerializedName("data")
-    private List<RunV0> data = new ArrayList<>();
+public class TermsOfUseAttributes extends PolarisComponent {
+    @SerializedName("sha256")
+    private List<byte[]> sha256 = new ArrayList<>();
 
-    @SerializedName("links")
-    private LinksPagination links = null;
+    @SerializedName("text")
+    private String text;
 
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
-
-    public RunV0Resources addDataItem(final RunV0 dataItem) {
-        this.data.add(dataItem);
+    public TermsOfUseAttributes addSha256Item(final byte[] sha256Item) {
+        this.sha256.add(sha256Item);
         return this;
     }
 
     /**
-     * Get data
-     * @return data
+     * Get sha256
+     * @return sha256
      */
-    public List<RunV0> getData() {
-        return data;
+    public List<byte[]> getSha256() {
+        return sha256;
     }
 
-    public void setData(final List<RunV0> data) {
-        this.data = data;
+    public void setSha256(final List<byte[]> sha256) {
+        this.sha256 = sha256;
     }
 
     /**
-     * Get links
-     * @return links
+     * Get text
+     * @return text
      */
-    public LinksPagination getLinks() {
-        return links;
+    public String getText() {
+        return text;
     }
 
-    public void setLinks(final LinksPagination links) {
-        this.links = links;
-    }
-
-    /**
-     * Get meta
-     * @return meta
-     */
-    public PolarisResourcesPagination getMeta() {
-        return meta;
-    }
-
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
+    public void setText(final String text) {
+        this.text = text;
     }
 
 }

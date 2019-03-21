@@ -21,67 +21,39 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
 
 import java.util.ArrayList;
 import java.util.List;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class RunV0Resources extends PolarisComponent {
-    @SerializedName("data")
-    private List<RunV0> data = new ArrayList<>();
+public class PathIds extends PolarisComponent {
+    @SerializedName("ids")
+    private List<String> ids = null;
 
-    @SerializedName("links")
-    private LinksPagination links = null;
-
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
-
-    public RunV0Resources addDataItem(final RunV0 dataItem) {
-        this.data.add(dataItem);
+    public PathIds addIdsItem(final String idsItem) {
+        if (this.ids == null) {
+            this.ids = new ArrayList<>();
+        }
+        this.ids.add(idsItem);
         return this;
     }
 
     /**
-     * Get data
-     * @return data
+     * Get ids
+     * @return ids
      */
-    public List<RunV0> getData() {
-        return data;
+    public List<String> getIds() {
+        return ids;
     }
 
-    public void setData(final List<RunV0> data) {
-        this.data = data;
-    }
-
-    /**
-     * Get links
-     * @return links
-     */
-    public LinksPagination getLinks() {
-        return links;
-    }
-
-    public void setLinks(final LinksPagination links) {
-        this.links = links;
-    }
-
-    /**
-     * Get meta
-     * @return meta
-     */
-    public PolarisResourcesPagination getMeta() {
-        return meta;
-    }
-
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
+    public void setIds(final List<String> ids) {
+        this.ids = ids;
     }
 
 }

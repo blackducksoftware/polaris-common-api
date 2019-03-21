@@ -21,67 +21,39 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class RunV0Resources extends PolarisComponent {
-    @SerializedName("data")
-    private List<RunV0> data = new ArrayList<>();
+public class TypedParamsIncludedFieldsParams extends PolarisComponent {
+    @SerializedName("params")
+    private Map<String, IncludedFieldsParams> params = null;
 
-    @SerializedName("links")
-    private LinksPagination links = null;
-
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
-
-    public RunV0Resources addDataItem(final RunV0 dataItem) {
-        this.data.add(dataItem);
+    public TypedParamsIncludedFieldsParams putParamsItem(final String key, final IncludedFieldsParams paramsItem) {
+        if (this.params == null) {
+            this.params = new HashMap<>();
+        }
+        this.params.put(key, paramsItem);
         return this;
     }
 
     /**
-     * Get data
-     * @return data
+     * Get params
+     * @return params
      */
-    public List<RunV0> getData() {
-        return data;
+    public Map<String, IncludedFieldsParams> getParams() {
+        return params;
     }
 
-    public void setData(final List<RunV0> data) {
-        this.data = data;
-    }
-
-    /**
-     * Get links
-     * @return links
-     */
-    public LinksPagination getLinks() {
-        return links;
-    }
-
-    public void setLinks(final LinksPagination links) {
-        this.links = links;
-    }
-
-    /**
-     * Get meta
-     * @return meta
-     */
-    public PolarisResourcesPagination getMeta() {
-        return meta;
-    }
-
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
+    public void setParams(final Map<String, IncludedFieldsParams> params) {
+        this.params = params;
     }
 
 }

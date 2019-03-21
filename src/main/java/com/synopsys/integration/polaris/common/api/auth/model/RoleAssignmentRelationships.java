@@ -21,67 +21,73 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
-
-import java.util.ArrayList;
-import java.util.List;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class RunV0Resources extends PolarisComponent {
-    @SerializedName("data")
-    private List<RunV0> data = new ArrayList<>();
+public class RoleAssignmentRelationships extends PolarisComponent {
+    @SerializedName("group")
+    private ToOneRelationship group = null;
 
-    @SerializedName("links")
-    private LinksPagination links = null;
+    @SerializedName("organization")
+    private ToOneRelationship organization = null;
 
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
+    @SerializedName("role")
+    private ToOneRelationship role = null;
 
-    public RunV0Resources addDataItem(final RunV0 dataItem) {
-        this.data.add(dataItem);
-        return this;
+    @SerializedName("user")
+    private ToOneRelationship user = null;
+
+    /**
+     * Get group
+     * @return group
+     */
+    public ToOneRelationship getGroup() {
+        return group;
+    }
+
+    public void setGroup(final ToOneRelationship group) {
+        this.group = group;
     }
 
     /**
-     * Get data
-     * @return data
+     * Get organization
+     * @return organization
      */
-    public List<RunV0> getData() {
-        return data;
+    public ToOneRelationship getOrganization() {
+        return organization;
     }
 
-    public void setData(final List<RunV0> data) {
-        this.data = data;
+    public void setOrganization(final ToOneRelationship organization) {
+        this.organization = organization;
     }
 
     /**
-     * Get links
-     * @return links
+     * Get role
+     * @return role
      */
-    public LinksPagination getLinks() {
-        return links;
+    public ToOneRelationship getRole() {
+        return role;
     }
 
-    public void setLinks(final LinksPagination links) {
-        this.links = links;
+    public void setRole(final ToOneRelationship role) {
+        this.role = role;
     }
 
     /**
-     * Get meta
-     * @return meta
+     * Get user
+     * @return user
      */
-    public PolarisResourcesPagination getMeta() {
-        return meta;
+    public ToOneRelationship getUser() {
+        return user;
     }
 
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
+    public void setUser(final ToOneRelationship user) {
+        this.user = user;
     }
 
 }
