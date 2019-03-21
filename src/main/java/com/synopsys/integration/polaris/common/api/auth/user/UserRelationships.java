@@ -21,42 +21,35 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth;
-
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+package com.synopsys.integration.polaris.common.api.auth.user;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisRelationship;
+import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class UserRelationships extends PolarisComponent {
+public class UserRelationships extends PolarisRelationships {
     @SerializedName("email-details")
-    private ToOneRelationship emailDetails = null;
-
+    private PolarisRelationship emailDetails = null;
     @SerializedName("entitlements")
-    private ToOneRelationship entitlements = null;
-
+    private PolarisRelationship entitlements = null;
     @SerializedName("githublogins")
-    private ToManyRelationship githublogins = null;
-
+    private PolarisRelationship githublogins = null;
     @SerializedName("groups")
-    private ToManyRelationship groups = null;
-
+    private PolarisRelationship groups = null;
     @SerializedName("microsoftlogins")
-    private ToManyRelationship microsoftlogins = null;
-
+    private PolarisRelationship microsoftlogins = null;
     @SerializedName("organization")
-    private ToOneRelationship organization = null;
+    private PolarisRelationship organization = null;
 
     /**
      * Get emailDetails
      * @return emailDetails
      */
-    public ToOneRelationship getEmailDetails() {
+    public PolarisRelationship getEmailDetails() {
         return emailDetails;
     }
 
-    public void setEmailDetails(final ToOneRelationship emailDetails) {
+    public void setEmailDetails(final PolarisRelationship emailDetails) {
         this.emailDetails = emailDetails;
     }
 
@@ -64,11 +57,11 @@ public class UserRelationships extends PolarisComponent {
      * Get entitlements
      * @return entitlements
      */
-    public ToOneRelationship getEntitlements() {
+    public PolarisRelationship getEntitlements() {
         return entitlements;
     }
 
-    public void setEntitlements(final ToOneRelationship entitlements) {
+    public void setEntitlements(final PolarisRelationship entitlements) {
         this.entitlements = entitlements;
     }
 
@@ -76,11 +69,11 @@ public class UserRelationships extends PolarisComponent {
      * Get githublogins
      * @return githublogins
      */
-    public ToManyRelationship getGithublogins() {
+    public PolarisRelationship getGithublogins() {
         return githublogins;
     }
 
-    public void setGithublogins(final ToManyRelationship githublogins) {
+    public void setGithublogins(final PolarisRelationship githublogins) {
         this.githublogins = githublogins;
     }
 
@@ -88,11 +81,11 @@ public class UserRelationships extends PolarisComponent {
      * Get groups
      * @return groups
      */
-    public ToManyRelationship getGroups() {
+    public PolarisRelationship getGroups() {
         return groups;
     }
 
-    public void setGroups(final ToManyRelationship groups) {
+    public void setGroups(final PolarisRelationship groups) {
         this.groups = groups;
     }
 
@@ -100,11 +93,11 @@ public class UserRelationships extends PolarisComponent {
      * Get microsoftlogins
      * @return microsoftlogins
      */
-    public ToManyRelationship getMicrosoftlogins() {
+    public PolarisRelationship getMicrosoftlogins() {
         return microsoftlogins;
     }
 
-    public void setMicrosoftlogins(final ToManyRelationship microsoftlogins) {
+    public void setMicrosoftlogins(final PolarisRelationship microsoftlogins) {
         this.microsoftlogins = microsoftlogins;
     }
 
@@ -112,11 +105,11 @@ public class UserRelationships extends PolarisComponent {
      * Get organization
      * @return organization
      */
-    public ToOneRelationship getOrganization() {
+    public PolarisRelationship getOrganization() {
         return organization;
     }
 
-    public void setOrganization(final ToOneRelationship organization) {
+    public void setOrganization(final PolarisRelationship organization) {
         this.organization = organization;
     }
 

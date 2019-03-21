@@ -21,17 +21,19 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth;
+package com.synopsys.integration.polaris.common.api.auth.user;
 
+import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.auth.SetPassword;
 
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserAttributes extends PolarisComponent {
+public class UserAttributes extends PolarisAttributes {
     @SerializedName("owner")
     private Boolean owner;
     @SerializedName("system")
