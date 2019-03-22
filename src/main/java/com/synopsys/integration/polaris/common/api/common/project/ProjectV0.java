@@ -21,15 +21,27 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.project;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.common.JsonApiSelfLinks;
+import com.synopsys.integration.polaris.common.api.common.MetaWithOrganizationTrash;
+import com.synopsys.integration.polaris.common.api.common.ObjectContainer;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ProjectV0Included extends JsonApiIncludedResource {
+public class ProjectV0 extends ObjectContainer {
     @SerializedName("attributes")
     private ProjectV0Attributes attributes = null;
+
+    @SerializedName("relationships")
+    private ProjectV0Relationships relationships = null;
+
+    @SerializedName("links")
+    private JsonApiSelfLinks links = null;
+
+    @SerializedName("meta")
+    private MetaWithOrganizationTrash meta = null;
 
     /**
      * Get attributes
@@ -41,6 +53,42 @@ public class ProjectV0Included extends JsonApiIncludedResource {
 
     public void setAttributes(final ProjectV0Attributes attributes) {
         this.attributes = attributes;
+    }
+
+    /**
+     * Get relationships
+     * @return relationships
+     */
+    public ProjectV0Relationships getRelationships() {
+        return relationships;
+    }
+
+    public void setRelationships(final ProjectV0Relationships relationships) {
+        this.relationships = relationships;
+    }
+
+    /**
+     * Get links
+     * @return links
+     */
+    public JsonApiSelfLinks getLinks() {
+        return links;
+    }
+
+    public void setLinks(final JsonApiSelfLinks links) {
+        this.links = links;
+    }
+
+    /**
+     * Get meta
+     * @return meta
+     */
+    public MetaWithOrganizationTrash getMeta() {
+        return meta;
+    }
+
+    public void setMeta(final MetaWithOrganizationTrash meta) {
+        this.meta = meta;
     }
 
 }

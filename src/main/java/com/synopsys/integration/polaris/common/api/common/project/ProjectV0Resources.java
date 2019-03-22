@@ -21,12 +21,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.project;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
+import com.synopsys.integration.polaris.common.api.PolarisResourcesPagination;
+import com.synopsys.integration.polaris.common.api.common.LinksPagination;
 
 import java.util.ArrayList;
 import java.util.List;

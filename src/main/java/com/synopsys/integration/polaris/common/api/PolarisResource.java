@@ -21,20 +21,20 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth;
+package com.synopsys.integration.polaris.common.api;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+import com.synopsys.integration.polaris.common.api.auth.PolarisResourceLinks;
 
-public class PolarisResource extends PolarisComponent {
+public abstract class PolarisResource<A extends PolarisAttributes, R extends PolarisRelationships> extends PolarisComponent {
     @SerializedName("type")
     private String type;
     @SerializedName("id")
     private String id;
     @SerializedName("attributes")
-    private PolarisAttributes attributes = null;
+    private A attributes = null;
     @SerializedName("relationships")
-    private PolarisRelationships relationships = null;
+    private R relationships = null;
     @SerializedName("links")
     private PolarisResourceLinks links;
 
@@ -54,19 +54,19 @@ public class PolarisResource extends PolarisComponent {
         this.id = id;
     }
 
-    public PolarisAttributes getAttributes() {
+    public A getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(final PolarisAttributes attributes) {
+    public void setAttributes(final A attributes) {
         this.attributes = attributes;
     }
 
-    public PolarisRelationships getRelationships() {
+    public R getRelationships() {
         return relationships;
     }
 
-    public void setRelationships(final PolarisRelationships relationships) {
+    public void setRelationships(final R relationships) {
         this.relationships = relationships;
     }
 

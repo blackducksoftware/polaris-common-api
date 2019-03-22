@@ -21,28 +21,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.project;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
+import java.util.Objects;
+import java.util.Arrays;
+
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import java.io.IOException;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ProjectV0Resource extends PolarisComponent {
-    @SerializedName("data")
-    private ProjectV0 data = null;
+public class ProjectV0RelationshipTarget extends PolarisComponent {
+    @SerializedName("type")
+    private String type = "project";
+
+    @SerializedName("id")
+    private String id;
 
     /**
-     * Get data
-     * @return data
+     * &#x60;Automatic&#x60; &#x60;Non-null&#x60; The literal string &#x60;project&#x60;.
+     * @return type
      */
-    public ProjectV0 getData() {
-        return data;
+    public String getType() {
+        return type;
     }
 
-    public void setData(final ProjectV0 data) {
-        this.data = data;
+    public void setType(final String type) {
+        this.type = type;
+    }
+
+    /**
+     * &#x60;Non-null&#x60; &#x60;Required&#x60; The ID of this project.
+     * @return id
+     */
+    public String getId() {
+        return id;
+    }
+
+    public void setId(final String id) {
+        this.id = id;
     }
 
 }

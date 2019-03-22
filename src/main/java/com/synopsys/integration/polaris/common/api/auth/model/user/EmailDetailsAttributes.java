@@ -21,41 +21,31 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.auth.model.user;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-import java.util.Objects;
-import java.util.Arrays;
-
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+public class EmailDetailsAttributes extends PolarisAttributes {
+    @SerializedName("email-verified")
+    private Boolean emailVerified;
+    @SerializedName("email")
+    private String email;
 
-import java.io.IOException;
-
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class ProjectV0Attributes extends PolarisComponent {
-    @SerializedName("name")
-    private String name;
-
-    /**
-     * &#x60;Mutable&#x60;
-     * @return name
-     */
-    public String getName() {
-        return name;
+    public Boolean getEmailVerified() {
+        return emailVerified;
     }
 
-    public void setName(final String name) {
-        this.name = name;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmailVerified(final Boolean emailVerified) {
+        this.emailVerified = emailVerified;
+    }
+
+    public void setEmail(final String email) {
+        this.email = email;
     }
 
 }
-

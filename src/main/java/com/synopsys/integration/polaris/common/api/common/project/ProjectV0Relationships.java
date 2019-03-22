@@ -21,7 +21,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.project;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 

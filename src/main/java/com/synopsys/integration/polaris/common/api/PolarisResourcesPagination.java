@@ -21,7 +21,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
@@ -38,38 +38,54 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ProjectV0RelationshipTarget extends PolarisComponent {
-    @SerializedName("type")
-    private String type = "project";
+public class PolarisResourcesPagination extends PolarisComponent {
+    @SerializedName("offset")
+    private BigDecimal offset;
 
-    @SerializedName("id")
-    private String id;
+    @SerializedName("limit")
+    private BigDecimal limit;
 
-    /**
-     * &#x60;Automatic&#x60; &#x60;Non-null&#x60; The literal string &#x60;project&#x60;.
-     * @return type
-     */
-    public String getType() {
-        return type;
-    }
-
-    public void setType(final String type) {
-        this.type = type;
-    }
+    @SerializedName("total")
+    private BigDecimal total;
 
     /**
-     * &#x60;Non-null&#x60; &#x60;Required&#x60; The ID of this project.
-     * @return id
+     * The offset used for this request.  If null, no offset was applied.
+     * @return offset
      */
-    public String getId() {
-        return id;
+    public BigDecimal getOffset() {
+        return offset;
     }
 
-    public void setId(final String id) {
-        this.id = id;
+    public void setOffset(final BigDecimal offset) {
+        this.offset = offset;
+    }
+
+    /**
+     * The maximum number of elements returned for this request.  If null, no limit was applied.
+     * @return limit
+     */
+    public BigDecimal getLimit() {
+        return limit;
+    }
+
+    public void setLimit(final BigDecimal limit) {
+        this.limit = limit;
+    }
+
+    /**
+     * The total number of results matching the provided criteria, without regard to the provided offset or limit.
+     * @return total
+     */
+    public BigDecimal getTotal() {
+        return total;
+    }
+
+    public void setTotal(final BigDecimal total) {
+        this.total = total;
     }
 
 }

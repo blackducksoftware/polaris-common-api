@@ -21,44 +21,31 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
-
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+package com.synopsys.integration.polaris.common.api.auth;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+public class PolarisRelationshipLinks extends PolarisComponent {
+    @SerializedName("self")
+    private String self;
+    @SerializedName("related")
+    private String related;
 
-public class BranchV0ProjectToOneRelationship extends PolarisComponent {
-    @SerializedName("links")
-    private JsonApiRelationshipLinks links = null;
-
-    @SerializedName("data")
-    private ProjectV0RelationshipTarget data = null;
-
-    /**
-     * Get links
-     * @return links
-     */
-    public JsonApiRelationshipLinks getLinks() {
-        return links;
+    public String getSelf() {
+        return self;
     }
 
-    public void setLinks(final JsonApiRelationshipLinks links) {
-        this.links = links;
+    public void setSelf(final String self) {
+        this.self = self;
     }
 
-    /**
-     * Get data
-     * @return data
-     */
-    public ProjectV0RelationshipTarget getData() {
-        return data;
+    public String getRelated() {
+        return related;
     }
 
-    public void setData(final ProjectV0RelationshipTarget data) {
-        this.data = data;
+    public void setRelated(final String related) {
+        this.related = related;
     }
 
 }
-

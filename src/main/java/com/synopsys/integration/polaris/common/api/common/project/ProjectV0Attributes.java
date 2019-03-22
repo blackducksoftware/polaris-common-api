@@ -21,7 +21,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth;
+package com.synopsys.integration.polaris.common.api.common.project;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
@@ -38,54 +38,23 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.IOException;
-import java.math.BigDecimal;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class PolarisResourcesPagination extends PolarisComponent {
-    @SerializedName("offset")
-    private BigDecimal offset;
-
-    @SerializedName("limit")
-    private BigDecimal limit;
-
-    @SerializedName("total")
-    private BigDecimal total;
+public class ProjectV0Attributes extends PolarisComponent {
+    @SerializedName("name")
+    private String name;
 
     /**
-     * The offset used for this request.  If null, no offset was applied.
-     * @return offset
+     * &#x60;Mutable&#x60;
+     * @return name
      */
-    public BigDecimal getOffset() {
-        return offset;
+    public String getName() {
+        return name;
     }
 
-    public void setOffset(final BigDecimal offset) {
-        this.offset = offset;
-    }
-
-    /**
-     * The maximum number of elements returned for this request.  If null, no limit was applied.
-     * @return limit
-     */
-    public BigDecimal getLimit() {
-        return limit;
-    }
-
-    public void setLimit(final BigDecimal limit) {
-        this.limit = limit;
-    }
-
-    /**
-     * The total number of results matching the provided criteria, without regard to the provided offset or limit.
-     * @return total
-     */
-    public BigDecimal getTotal() {
-        return total;
-    }
-
-    public void setTotal(final BigDecimal total) {
-        this.total = total;
+    public void setName(final String name) {
+        this.name = name;
     }
 
 }

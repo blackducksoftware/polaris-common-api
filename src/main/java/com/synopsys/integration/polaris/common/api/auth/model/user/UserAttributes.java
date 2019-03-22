@@ -23,7 +23,7 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model.user;
 
-import com.synopsys.integration.polaris.common.api.auth.PolarisAttributes;
+import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.auth.model.SetPassword;

@@ -21,7 +21,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.branch;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
@@ -29,35 +29,35 @@ import com.google.gson.annotations.SerializedName;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class BranchV0Relationships extends PolarisComponent {
-    @SerializedName("project")
-    private BranchV0ProjectToOneRelationship project = null;
+public class BranchV0ProjectToOneRelationship extends PolarisComponent {
+    @SerializedName("links")
+    private JsonApiRelationshipLinks links = null;
 
-    @SerializedName("revisions")
-    private JsonApiLazyRelationship revisions = null;
-
-    /**
-     * Get project
-     * @return project
-     */
-    public BranchV0ProjectToOneRelationship getProject() {
-        return project;
-    }
-
-    public void setProject(final BranchV0ProjectToOneRelationship project) {
-        this.project = project;
-    }
+    @SerializedName("data")
+    private ProjectV0RelationshipTarget data = null;
 
     /**
-     * Get revisions
-     * @return revisions
+     * Get links
+     * @return links
      */
-    public JsonApiLazyRelationship getRevisions() {
-        return revisions;
+    public JsonApiRelationshipLinks getLinks() {
+        return links;
     }
 
-    public void setRevisions(final JsonApiLazyRelationship revisions) {
-        this.revisions = revisions;
+    public void setLinks(final JsonApiRelationshipLinks links) {
+        this.links = links;
+    }
+
+    /**
+     * Get data
+     * @return data
+     */
+    public ProjectV0RelationshipTarget getData() {
+        return data;
+    }
+
+    public void setData(final ProjectV0RelationshipTarget data) {
+        this.data = data;
     }
 
 }

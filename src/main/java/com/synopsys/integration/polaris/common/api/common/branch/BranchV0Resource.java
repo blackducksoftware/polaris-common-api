@@ -21,67 +21,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.branch;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.PolarisResourcesPagination;
+import com.synopsys.integration.polaris.common.api.common.JsonApiIncludedResource;
 
 import java.util.ArrayList;
 import java.util.List;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class RunPropertyV0Resources extends PolarisComponent {
+public class BranchV0Resource extends PolarisComponent {
     @SerializedName("data")
-    private List<RunPropertyV0> data = new ArrayList<>();
+    private BranchV0 data = null;
 
-    @SerializedName("links")
-    private LinksPagination links = null;
-
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
-
-    public RunPropertyV0Resources addDataItem(final RunPropertyV0 dataItem) {
-        this.data.add(dataItem);
-        return this;
-    }
+    @SerializedName("included")
+    private List<JsonApiIncludedResource> included = null;
 
     /**
      * Get data
      * @return data
      */
-    public List<RunPropertyV0> getData() {
+    public BranchV0 getData() {
         return data;
     }
 
-    public void setData(final List<RunPropertyV0> data) {
+    public void setData(final BranchV0 data) {
         this.data = data;
     }
 
-    /**
-     * Get links
-     * @return links
-     */
-    public LinksPagination getLinks() {
-        return links;
-    }
-
-    public void setLinks(final LinksPagination links) {
-        this.links = links;
+    public BranchV0Resource addIncludedItem(final JsonApiIncludedResource includedItem) {
+        if (this.included == null) {
+            this.included = new ArrayList<>();
+        }
+        this.included.add(includedItem);
+        return this;
     }
 
     /**
-     * Get meta
-     * @return meta
+     * Get included
+     * @return included
      */
-    public PolarisResourcesPagination getMeta() {
-        return meta;
+    public List<JsonApiIncludedResource> getIncluded() {
+        return included;
     }
 
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
+    public void setIncluded(final List<JsonApiIncludedResource> included) {
+        this.included = included;
     }
 
 }

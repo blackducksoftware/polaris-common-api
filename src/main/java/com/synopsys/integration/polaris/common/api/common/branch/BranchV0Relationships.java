@@ -21,55 +21,44 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.branch;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import java.util.Objects;
-import java.util.Arrays;
-
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
-import java.io.IOException;
+import com.synopsys.integration.polaris.common.api.common.JsonApiLazyRelationship;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class BranchV0Attributes extends PolarisComponent {
-    @SerializedName("name")
-    private String name;
+public class BranchV0Relationships extends PolarisComponent {
+    @SerializedName("project")
+    private BranchV0ProjectToOneRelationship project = null;
 
-    @SerializedName("main-for-project")
-    private Boolean mainForProject;
-
-    /**
-     * &#x60;Mutable&#x60;
-     * @return name
-     */
-    public String getName() {
-        return name;
-    }
-
-    public void setName(final String name) {
-        this.name = name;
-    }
+    @SerializedName("revisions")
+    private JsonApiLazyRelationship revisions = null;
 
     /**
-     * &#x60;Mutable&#x60;
-     * @return mainForProject
+     * Get project
+     * @return project
      */
-    public Boolean getMainForProject() {
-        return mainForProject;
+    public BranchV0ProjectToOneRelationship getProject() {
+        return project;
     }
 
-    public void setMainForProject(final Boolean mainForProject) {
-        this.mainForProject = mainForProject;
+    public void setProject(final BranchV0ProjectToOneRelationship project) {
+        this.project = project;
+    }
+
+    /**
+     * Get revisions
+     * @return revisions
+     */
+    public JsonApiLazyRelationship getRevisions() {
+        return revisions;
+    }
+
+    public void setRevisions(final JsonApiLazyRelationship revisions) {
+        this.revisions = revisions;
     }
 
 }

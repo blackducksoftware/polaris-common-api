@@ -21,54 +21,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.branch;
 
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import com.google.gson.annotations.SerializedName;
+import java.util.Objects;
+import java.util.Arrays;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import java.io.IOException;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class BranchV0Resource extends PolarisComponent {
-    @SerializedName("data")
-    private BranchV0 data = null;
+public class BranchV0Attributes extends PolarisComponent {
+    @SerializedName("name")
+    private String name;
 
-    @SerializedName("included")
-    private List<JsonApiIncludedResource> included = null;
+    @SerializedName("main-for-project")
+    private Boolean mainForProject;
 
     /**
-     * Get data
-     * @return data
+     * &#x60;Mutable&#x60;
+     * @return name
      */
-    public BranchV0 getData() {
-        return data;
+    public String getName() {
+        return name;
     }
 
-    public void setData(final BranchV0 data) {
-        this.data = data;
-    }
-
-    public BranchV0Resource addIncludedItem(final JsonApiIncludedResource includedItem) {
-        if (this.included == null) {
-            this.included = new ArrayList<>();
-        }
-        this.included.add(includedItem);
-        return this;
+    public void setName(final String name) {
+        this.name = name;
     }
 
     /**
-     * Get included
-     * @return included
+     * &#x60;Mutable&#x60;
+     * @return mainForProject
      */
-    public List<JsonApiIncludedResource> getIncluded() {
-        return included;
+    public Boolean getMainForProject() {
+        return mainForProject;
     }
 
-    public void setIncluded(final List<JsonApiIncludedResource> included) {
-        this.included = included;
+    public void setMainForProject(final Boolean mainForProject) {
+        this.mainForProject = mainForProject;
     }
 
 }

@@ -21,21 +21,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth;
+package com.synopsys.integration.polaris.common.api;
 
-import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-public abstract class PolarisRelationship extends PolarisComponent {
-    @SerializedName("links")
-    private PolarisRelationshipLinks links;
-
-    public PolarisRelationshipLinks getLinks() {
-        return links;
-    }
-
-    public void setLinks(final PolarisRelationshipLinks links) {
-        this.links = links;
-    }
-
+public abstract class PolarisAttributes extends PolarisComponent {
 }

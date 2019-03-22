@@ -21,16 +21,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth;
+package com.synopsys.integration.polaris.common.api;
 
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-public class PolarisResources<T extends PolarisResource> extends PolarisComponent {
+public class PolarisResources<R extends PolarisResource> extends PolarisComponent {
     @SerializedName("data")
-    private List<T> data = null;
+    private List<R> data = null;
     @SerializedName("included")
     private List<PolarisResource> included = null;
     @SerializedName("meta")
@@ -40,11 +39,11 @@ public class PolarisResources<T extends PolarisResource> extends PolarisComponen
      * Get data
      * @return data
      */
-    public List<T> getData() {
+    public List<R> getData() {
         return data;
     }
 
-    public void setData(final List<T> data) {
+    public void setData(final List<R> data) {
         this.data = data;
     }
 

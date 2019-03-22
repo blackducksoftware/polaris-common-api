@@ -21,18 +21,21 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common;
+package com.synopsys.integration.polaris.common.api.common.branch;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.common.JsonApiSelfLinks;
+import com.synopsys.integration.polaris.common.api.common.MetaWithOrganizationTrash;
+import com.synopsys.integration.polaris.common.api.common.ObjectContainer;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ProjectV0 extends ObjectContainer {
+public class BranchV0 extends ObjectContainer {
     @SerializedName("attributes")
-    private ProjectV0Attributes attributes = null;
+    private BranchV0Attributes attributes = null;
 
     @SerializedName("relationships")
-    private ProjectV0Relationships relationships = null;
+    private BranchV0Relationships relationships = null;
 
     @SerializedName("links")
     private JsonApiSelfLinks links = null;
@@ -44,11 +47,11 @@ public class ProjectV0 extends ObjectContainer {
      * Get attributes
      * @return attributes
      */
-    public ProjectV0Attributes getAttributes() {
+    public BranchV0Attributes getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(final ProjectV0Attributes attributes) {
+    public void setAttributes(final BranchV0Attributes attributes) {
         this.attributes = attributes;
     }
 
@@ -56,11 +59,11 @@ public class ProjectV0 extends ObjectContainer {
      * Get relationships
      * @return relationships
      */
-    public ProjectV0Relationships getRelationships() {
+    public BranchV0Relationships getRelationships() {
         return relationships;
     }
 
-    public void setRelationships(final ProjectV0Relationships relationships) {
+    public void setRelationships(final BranchV0Relationships relationships) {
         this.relationships = relationships;
     }
 

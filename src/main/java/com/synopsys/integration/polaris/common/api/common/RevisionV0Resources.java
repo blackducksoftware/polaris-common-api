@@ -26,7 +26,7 @@ package com.synopsys.integration.polaris.common.api.common;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisResourcesPagination;
+import com.synopsys.integration.polaris.common.api.PolarisResourcesPagination;
 
 import java.util.ArrayList;
 import java.util.List;
