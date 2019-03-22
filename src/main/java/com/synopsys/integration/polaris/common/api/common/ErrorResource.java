@@ -21,29 +21,37 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.common;
 
-import java.io.Serializable;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import com.synopsys.integration.util.Stringable;
+import com.google.gson.annotations.SerializedName;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
+import java.util.ArrayList;
+import java.util.List;
 
-    public PolarisComponent() {
-        this.json = null;
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+
+public class ErrorResource extends PolarisComponent {
+    @SerializedName("errors")
+    private List<Error> errors = new ArrayList<>();
+
+    public ErrorResource addErrorsItem(final Error errorsItem) {
+        this.errors.add(errorsItem);
+        return this;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
+    /**
+     * Get errors
+     * @return errors
+     */
+    public List<Error> getErrors() {
+        return errors;
     }
 
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
+    public void setErrors(final List<Error> errors) {
+        this.errors = errors;
     }
 
 }
+

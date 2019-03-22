@@ -21,29 +21,40 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
-import java.io.Serializable;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import com.synopsys.integration.util.Stringable;
+import com.google.gson.annotations.SerializedName;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
+import java.util.ArrayList;
+import java.util.List;
 
-    public PolarisComponent() {
-        this.json = null;
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+
+public class TermsOfUseResources extends PolarisComponent {
+    @SerializedName("data")
+    private List<TermsOfUse> data = null;
+
+    public TermsOfUseResources addDataItem(final TermsOfUse dataItem) {
+        if (this.data == null) {
+            this.data = new ArrayList<>();
+        }
+        this.data.add(dataItem);
+        return this;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
+    /**
+     * Get data
+     * @return data
+     */
+    public List<TermsOfUse> getData() {
+        return data;
     }
 
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
+    public void setData(final List<TermsOfUse> data) {
+        this.data = data;
     }
 
 }
+

@@ -21,29 +21,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
-import java.io.Serializable;
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-import com.synopsys.integration.util.Stringable;
-
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
-
-    public PolarisComponent() {
-        this.json = null;
-    }
-
-    public PolarisComponent(final String json) {
-        this.json = json;
-    }
-
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
-    }
-
+public class LicenseV1 extends License {
 }
+

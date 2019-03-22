@@ -23,27 +23,30 @@
  */
 package com.synopsys.integration.polaris.common.api;
 
-import java.io.Serializable;
+import java.util.List;
 
-import com.synopsys.integration.util.Stringable;
+import com.google.gson.annotations.SerializedName;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
+public abstract class PolarisResponse extends PolarisComponent {
+    @SerializedName("included")
+    private List<PolarisResource> included = null;
+    @SerializedName("meta")
+    private PolarisResourcesPagination meta = null;
 
-    public PolarisComponent() {
-        this.json = null;
+    public List<PolarisResource> getIncluded() {
+        return included;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
+    public void setIncluded(final List<PolarisResource> included) {
+        this.included = included;
     }
 
-    public String getJson() {
-        return json;
+    public PolarisResourcesPagination getMeta() {
+        return meta;
     }
 
-    public void setJson(final String json) {
-        this.json = json;
+    public void setMeta(final PolarisResourcesPagination meta) {
+        this.meta = meta;
     }
 
 }

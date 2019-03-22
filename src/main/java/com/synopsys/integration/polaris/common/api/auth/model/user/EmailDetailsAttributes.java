@@ -21,29 +21,31 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.auth.model.user;
 
-import java.io.Serializable;
+import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 
-import com.synopsys.integration.util.Stringable;
+public class EmailDetailsAttributes extends PolarisAttributes {
+    @SerializedName("email-verified")
+    private Boolean emailVerified;
+    @SerializedName("email")
+    private String email;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
-
-    public PolarisComponent() {
-        this.json = null;
+    public Boolean getEmailVerified() {
+        return emailVerified;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
+    public String getEmail() {
+        return email;
     }
 
-    public String getJson() {
-        return json;
+    public void setEmailVerified(final Boolean emailVerified) {
+        this.emailVerified = emailVerified;
     }
 
-    public void setJson(final String json) {
-        this.json = json;
+    public void setEmail(final String email) {
+        this.email = email;
     }
 
 }

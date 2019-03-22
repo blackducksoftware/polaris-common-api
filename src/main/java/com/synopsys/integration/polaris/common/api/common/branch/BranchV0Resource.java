@@ -21,29 +21,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.common.branch;
 
-import java.io.Serializable;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import com.synopsys.integration.util.Stringable;
+import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisResource;
+import com.synopsys.integration.polaris.common.api.common.JsonApiIncludedResource;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
+import java.util.ArrayList;
+import java.util.List;
 
-    public PolarisComponent() {
-        this.json = null;
-    }
-
-    public PolarisComponent(final String json) {
-        this.json = json;
-    }
-
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
-    }
-
+public class BranchV0Resource extends PolarisResource<BranchV0Attributes, BranchV0Relationships> {
 }
+

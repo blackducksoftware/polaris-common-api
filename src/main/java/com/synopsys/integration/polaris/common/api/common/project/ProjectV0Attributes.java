@@ -21,29 +21,40 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.common.project;
 
-import java.io.Serializable;
+import com.synopsys.integration.polaris.common.api.PolarisAttributes;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import com.synopsys.integration.util.Stringable;
+import java.util.Objects;
+import java.util.Arrays;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 
-    public PolarisComponent() {
-        this.json = null;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import java.io.IOException;
+
+public class ProjectV0Attributes extends PolarisAttributes {
+    @SerializedName("name")
+    private String name;
+
+    /**
+     * &#x60;Mutable&#x60;
+     * @return name
+     */
+    public String getName() {
+        return name;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
-    }
-
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
+    public void setName(final String name) {
+        this.name = name;
     }
 
 }
+

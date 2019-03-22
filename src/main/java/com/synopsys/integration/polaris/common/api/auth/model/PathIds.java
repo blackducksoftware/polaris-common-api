@@ -21,29 +21,40 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.auth.model;
 
-import java.io.Serializable;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import com.synopsys.integration.util.Stringable;
+import com.google.gson.annotations.SerializedName;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
+import java.util.ArrayList;
+import java.util.List;
 
-    public PolarisComponent() {
-        this.json = null;
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+
+public class PathIds extends PolarisComponent {
+    @SerializedName("ids")
+    private List<String> ids = null;
+
+    public PathIds addIdsItem(final String idsItem) {
+        if (this.ids == null) {
+            this.ids = new ArrayList<>();
+        }
+        this.ids.add(idsItem);
+        return this;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
+    /**
+     * Get ids
+     * @return ids
+     */
+    public List<String> getIds() {
+        return ids;
     }
 
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
+    public void setIds(final List<String> ids) {
+        this.ids = ids;
     }
 
 }
+

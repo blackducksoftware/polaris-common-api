@@ -21,29 +21,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api;
+package com.synopsys.integration.polaris.common.api.common;
 
-import java.io.Serializable;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import com.synopsys.integration.util.Stringable;
+import com.google.gson.annotations.SerializedName;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
+// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-    public PolarisComponent() {
-        this.json = null;
+public class RunPropertyV0Relationships extends PolarisComponent {
+    @SerializedName("run")
+    private RunPropertyV0RunRelationship run = null;
+
+    /**
+     * Get run
+     * @return run
+     */
+    public RunPropertyV0RunRelationship getRun() {
+        return run;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
-    }
-
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
+    public void setRun(final RunPropertyV0RunRelationship run) {
+        this.run = run;
     }
 
 }
+

@@ -23,27 +23,18 @@
  */
 package com.synopsys.integration.polaris.common.api;
 
-import java.io.Serializable;
+import com.google.gson.annotations.SerializedName;
 
-import com.synopsys.integration.util.Stringable;
+public class PolarisSingleResource<R extends PolarisResource> extends PolarisResponse {
+    @SerializedName("data")
+    private R data;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
-
-    public PolarisComponent() {
-        this.json = null;
+    public R getData() {
+        return data;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
-    }
-
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
+    public void setData(final R data) {
+        this.data = data;
     }
 
 }

@@ -23,27 +23,19 @@
  */
 package com.synopsys.integration.polaris.common.api;
 
-import java.io.Serializable;
+import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.auth.PolarisRelationshipLinks;
 
-import com.synopsys.integration.util.Stringable;
+public class PolarisRelationship extends PolarisComponent {
+    @SerializedName("links")
+    private PolarisRelationshipLinks links;
 
-public class PolarisComponent extends Stringable implements Serializable {
-    private String json;
-
-    public PolarisComponent() {
-        this.json = null;
+    public PolarisRelationshipLinks getLinks() {
+        return links;
     }
 
-    public PolarisComponent(final String json) {
-        this.json = json;
-    }
-
-    public String getJson() {
-        return json;
-    }
-
-    public void setJson(final String json) {
-        this.json = json;
+    public void setLinks(final PolarisRelationshipLinks links) {
+        this.links = links;
     }
 
 }
