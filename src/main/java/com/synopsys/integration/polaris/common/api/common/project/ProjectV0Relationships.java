@@ -23,28 +23,26 @@
  */
 package com.synopsys.integration.polaris.common.api.common.project;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisRelationship;
+import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class ProjectV0Relationships extends PolarisComponent {
+public class ProjectV0Relationships extends PolarisRelationships {
     @SerializedName("branches")
-    private JsonApiLazyRelationship branches = null;
+    private PolarisRelationship branches = null;
 
     @SerializedName("runs")
-    private JsonApiLazyRelationship runs = null;
+    private PolarisRelationship runs = null;
 
     /**
      * Get branches
      * @return branches
      */
-    public JsonApiLazyRelationship getBranches() {
+    public PolarisRelationship getBranches() {
         return branches;
     }
 
-    public void setBranches(final JsonApiLazyRelationship branches) {
+    public void setBranches(final PolarisRelationship branches) {
         this.branches = branches;
     }
 
@@ -52,11 +50,11 @@ public class ProjectV0Relationships extends PolarisComponent {
      * Get runs
      * @return runs
      */
-    public JsonApiLazyRelationship getRuns() {
+    public PolarisRelationship getRuns() {
         return runs;
     }
 
-    public void setRuns(final JsonApiLazyRelationship runs) {
+    public void setRuns(final PolarisRelationship runs) {
         this.runs = runs;
     }
 

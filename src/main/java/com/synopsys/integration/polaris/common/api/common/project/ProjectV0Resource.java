@@ -26,24 +26,8 @@ package com.synopsys.integration.polaris.common.api.common.project;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisResource;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class ProjectV0Resource extends PolarisComponent {
-    @SerializedName("data")
-    private ProjectV0 data = null;
-
-    /**
-     * Get data
-     * @return data
-     */
-    public ProjectV0 getData() {
-        return data;
-    }
-
-    public void setData(final ProjectV0 data) {
-        this.data = data;
-    }
-
+public class ProjectV0Resource extends PolarisResource<ProjectV0Attributes, ProjectV0Relationships> {
 }
 

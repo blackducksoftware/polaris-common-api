@@ -26,51 +26,12 @@ package com.synopsys.integration.polaris.common.api.common.branch;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisResource;
 import com.synopsys.integration.polaris.common.api.common.JsonApiIncludedResource;
 
 import java.util.ArrayList;
 import java.util.List;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class BranchV0Resource extends PolarisComponent {
-    @SerializedName("data")
-    private BranchV0 data = null;
-
-    @SerializedName("included")
-    private List<JsonApiIncludedResource> included = null;
-
-    /**
-     * Get data
-     * @return data
-     */
-    public BranchV0 getData() {
-        return data;
-    }
-
-    public void setData(final BranchV0 data) {
-        this.data = data;
-    }
-
-    public BranchV0Resource addIncludedItem(final JsonApiIncludedResource includedItem) {
-        if (this.included == null) {
-            this.included = new ArrayList<>();
-        }
-        this.included.add(includedItem);
-        return this;
-    }
-
-    /**
-     * Get included
-     * @return included
-     */
-    public List<JsonApiIncludedResource> getIncluded() {
-        return included;
-    }
-
-    public void setIncluded(final List<JsonApiIncludedResource> included) {
-        this.included = included;
-    }
-
+public class BranchV0Resource extends PolarisResource<BranchV0Attributes, BranchV0Relationships> {
 }
 

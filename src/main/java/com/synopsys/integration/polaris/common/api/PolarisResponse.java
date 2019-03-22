@@ -21,9 +21,32 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common.project;
+package com.synopsys.integration.polaris.common.api;
 
-import com.synopsys.integration.polaris.common.api.PolarisResources;
+import java.util.List;
 
-public class ProjectV0Resources extends PolarisResources<ProjectV0Resource> {
+import com.google.gson.annotations.SerializedName;
+
+public abstract class PolarisResponse extends PolarisComponent {
+    @SerializedName("included")
+    private List<PolarisResource> included = null;
+    @SerializedName("meta")
+    private PolarisResourcesPagination meta = null;
+
+    public List<PolarisResource> getIncluded() {
+        return included;
+    }
+
+    public void setIncluded(final List<PolarisResource> included) {
+        this.included = included;
+    }
+
+    public PolarisResourcesPagination getMeta() {
+        return meta;
+    }
+
+    public void setMeta(final PolarisResourcesPagination meta) {
+        this.meta = meta;
+    }
+
 }

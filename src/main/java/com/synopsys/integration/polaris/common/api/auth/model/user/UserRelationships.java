@@ -24,7 +24,7 @@
 package com.synopsys.integration.polaris.common.api.auth.model.user;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.auth.PolarisRelationship;
+import com.synopsys.integration.polaris.common.api.PolarisRelationship;
 import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
 public class UserRelationships extends PolarisRelationships {

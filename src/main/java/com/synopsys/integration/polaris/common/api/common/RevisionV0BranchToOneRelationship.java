@@ -26,7 +26,6 @@ package com.synopsys.integration.polaris.common.api.common;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.common.branch.BranchV0RelationshipTarget;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
@@ -34,8 +33,9 @@ public class RevisionV0BranchToOneRelationship extends PolarisComponent {
     @SerializedName("links")
     private JsonApiRelationshipLinks links = null;
 
-    @SerializedName("data")
-    private BranchV0RelationshipTarget data = null;
+    // FIXME
+    //    @SerializedName("data")
+    //    private BranchV0RelationshipTarget data = null;
 
     /**
      * Get links
@@ -49,17 +49,18 @@ public class RevisionV0BranchToOneRelationship extends PolarisComponent {
         this.links = links;
     }
 
-    /**
-     * Get data
-     * @return data
-     */
-    public BranchV0RelationshipTarget getData() {
-        return data;
-    }
-
-    public void setData(final BranchV0RelationshipTarget data) {
-        this.data = data;
-    }
+    // FIXME
+    //    /**
+    //     * Get data
+    //     * @return data
+    //     */
+    //    public BranchV0RelationshipTarget getData() {
+    //        return data;
+    //    }
+    //
+    //    public void setData(final BranchV0RelationshipTarget data) {
+    //        this.data = data;
+    //    }
 
 }
 

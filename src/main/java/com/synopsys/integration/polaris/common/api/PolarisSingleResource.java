@@ -21,9 +21,20 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common.project;
+package com.synopsys.integration.polaris.common.api;
 
-import com.synopsys.integration.polaris.common.api.PolarisResources;
+import com.google.gson.annotations.SerializedName;
 
-public class ProjectV0Resources extends PolarisResources<ProjectV0Resource> {
+public class PolarisSingleResource<R extends PolarisResource> extends PolarisResponse {
+    @SerializedName("data")
+    private R data;
+
+    public R getData() {
+        return data;
+    }
+
+    public void setData(final R data) {
+        this.data = data;
+    }
+
 }

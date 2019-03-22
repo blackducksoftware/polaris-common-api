@@ -27,13 +27,9 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PolarisResources<R extends PolarisResource> extends PolarisComponent {
+public abstract class PolarisResources<R extends PolarisResource> extends PolarisResponse {
     @SerializedName("data")
     private List<R> data = null;
-    @SerializedName("included")
-    private List<PolarisResource> included = null;
-    @SerializedName("meta")
-    private PolarisResourcesPagination meta = null;
 
     /**
      * Get data
@@ -45,22 +41,6 @@ public class PolarisResources<R extends PolarisResource> extends PolarisComponen
 
     public void setData(final List<R> data) {
         this.data = data;
-    }
-
-    public List<PolarisResource> getIncluded() {
-        return included;
-    }
-
-    public void setIncluded(final List<PolarisResource> included) {
-        this.included = included;
-    }
-
-    public PolarisResourcesPagination getMeta() {
-        return meta;
-    }
-
-    public void setMeta(final PolarisResourcesPagination meta) {
-        this.meta = meta;
     }
 
 }

@@ -23,22 +23,8 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model.user;
 
-import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisResource;
 import com.synopsys.integration.polaris.common.api.auth.empty.PolarisRelationshipsEmpty;
 
 public class EmailDetailsResource extends PolarisResource<EmailDetailsAttributes, PolarisRelationshipsEmpty> {
-    @SerializedName("attributes")
-    private EmailDetailsAttributes attributes;
-
-    @Override
-    public EmailDetailsAttributes getAttributes() {
-        return attributes;
-    }
-
-    @Override
-    public void setAttributes(final EmailDetailsAttributes attributes) {
-        this.attributes = attributes;
-    }
-
 }

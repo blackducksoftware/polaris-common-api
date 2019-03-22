@@ -21,28 +21,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common.project;
+package com.synopsys.integration.polaris.common.api.auth.model.user;
 
-import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.common.JsonApiIncludedResource;
+import com.synopsys.integration.polaris.common.api.PolarisResources;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class ProjectV0Included extends JsonApiIncludedResource {
-    @SerializedName("attributes")
-    private ProjectV0Attributes attributes = null;
-
-    /**
-     * Get attributes
-     * @return attributes
-     */
-    public ProjectV0Attributes getAttributes() {
-        return attributes;
-    }
-
-    public void setAttributes(final ProjectV0Attributes attributes) {
-        this.attributes = attributes;
-    }
-
+public class UserResources extends PolarisResources<UserResource> {
 }
-
