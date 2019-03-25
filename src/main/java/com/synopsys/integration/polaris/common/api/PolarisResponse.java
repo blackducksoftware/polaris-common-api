@@ -29,15 +29,15 @@ import com.google.gson.annotations.SerializedName;
 
 public abstract class PolarisResponse extends PolarisComponent {
     @SerializedName("included")
-    private List<PolarisResource> included = null;
+    private List<PolarisResourceSparse> included = null;
     @SerializedName("meta")
     private PolarisResourcesPagination meta = null;
 
-    public List<PolarisResource> getIncluded() {
+    public List<PolarisResourceSparse> getIncluded() {
         return included;
     }
 
-    public void setIncluded(final List<PolarisResource> included) {
+    public void setIncluded(final List<PolarisResourceSparse> included) {
         this.included = included;
     }
 

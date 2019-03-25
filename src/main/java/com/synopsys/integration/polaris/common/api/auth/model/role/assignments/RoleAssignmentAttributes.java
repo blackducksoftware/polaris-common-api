@@ -23,14 +23,12 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model.role.assignments;
 
-import java.time.OffsetDateTime;
-
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 
 public class RoleAssignmentAttributes extends PolarisAttributes {
     @SerializedName("expires-by")
-    private OffsetDateTime expiresBy;
+    private String expiresBy;
 
     @SerializedName("object")
     private String object;
@@ -39,11 +37,11 @@ public class RoleAssignmentAttributes extends PolarisAttributes {
      * Get expiresBy
      * @return expiresBy
      */
-    public OffsetDateTime getExpiresBy() {
+    public String getExpiresBy() {
         return expiresBy;
     }
 
-    public void setExpiresBy(final OffsetDateTime expiresBy) {
+    public void setExpiresBy(final String expiresBy) {
         this.expiresBy = expiresBy;
     }
 

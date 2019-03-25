@@ -23,9 +23,6 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model.role;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 
@@ -34,25 +31,19 @@ public class RoleAttributes extends PolarisAttributes {
     public static final String ROLE_CONTRIBUTOR = "Contributor";
 
     @SerializedName("permissions")
-    private Map<String, RolePermissions> permissions = new HashMap<>();
-
+    private RolePermissions permissions;
     @SerializedName("rolename")
     private String rolename;
-
-    public RoleAttributes putPermissionsItem(final String key, final RolePermissions permissionsItem) {
-        this.permissions.put(key, permissionsItem);
-        return this;
-    }
 
     /**
      * Get permissions
      * @return permissions
      */
-    public Map<String, RolePermissions> getPermissions() {
+    public RolePermissions getPermissions() {
         return permissions;
     }
 
-    public void setPermissions(final Map<String, RolePermissions> permissions) {
+    public void setPermissions(final RolePermissions permissions) {
         this.permissions = permissions;
     }
 

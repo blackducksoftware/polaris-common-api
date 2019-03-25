@@ -27,7 +27,7 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
-public abstract class PolarisResources<R extends PolarisResource> extends PolarisResponse {
+public class PolarisResources<R extends PolarisResource> extends PolarisResponse {
     @SerializedName("data")
     private List<R> data = null;
 

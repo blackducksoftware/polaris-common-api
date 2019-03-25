@@ -26,7 +26,7 @@ package com.synopsys.integration.polaris.common.api;
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.auth.PolarisResourceLinks;
 
-public abstract class PolarisResource<A extends PolarisAttributes, R extends PolarisRelationships> extends PolarisComponent {
+public class PolarisResource<A extends PolarisAttributes, R extends PolarisRelationships> extends PolarisComponent {
     @SerializedName("type")
     private String type;
     @SerializedName("id")
