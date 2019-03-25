@@ -23,5 +23,5 @@
  */
 package com.synopsys.integration.polaris.common.api;
 
-public abstract class PolarisRelationships extends PolarisComponent {
+public class PolarisRelationships extends PolarisComponent {
 }

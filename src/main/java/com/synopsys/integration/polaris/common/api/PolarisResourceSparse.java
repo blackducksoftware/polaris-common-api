@@ -21,9 +21,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model.user;
+package com.synopsys.integration.polaris.common.api;
 
-import com.synopsys.integration.polaris.common.api.PolarisResourcesSingle;
-
-public class EmailDetailsResources extends PolarisResourcesSingle<EmailDetailsResource> {
+public class PolarisResourceSparse extends PolarisResource<PolarisAttributes, PolarisRelationships> {
 }

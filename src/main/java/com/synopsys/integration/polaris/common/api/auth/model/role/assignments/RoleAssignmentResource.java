@@ -21,29 +21,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.auth.model.role.assignments;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+import com.synopsys.integration.polaris.common.api.PolarisResource;
 
-import com.google.gson.annotations.SerializedName;
-
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class RoleAssignmentResource extends PolarisComponent {
-    @SerializedName("data")
-    private RoleAssignment data = null;
-
-    /**
-     * Get data
-     * @return data
-     */
-    public RoleAssignment getData() {
-        return data;
-    }
-
-    public void setData(final RoleAssignment data) {
-        this.data = data;
-    }
-
+public class RoleAssignmentResource extends PolarisResource<RoleAssignmentAttributes, RoleAssignmentRelationships> {
 }
 

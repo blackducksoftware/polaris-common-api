@@ -21,36 +21,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
-
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+package com.synopsys.integration.polaris.common.api.auth.model.role.assignments;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class RoleAssignmentRelationships extends PolarisComponent {
+public class RoleAssignmentRelationships extends PolarisRelationships {
     @SerializedName("group")
-    private ToOneRelationship group = null;
+    private RoleAssignmentRelationship group = null;
 
     @SerializedName("organization")
-    private ToOneRelationship organization = null;
+    private RoleAssignmentRelationship organization = null;
 
     @SerializedName("role")
-    private ToOneRelationship role = null;
+    private RoleAssignmentRelationship role = null;
 
     @SerializedName("user")
-    private ToOneRelationship user = null;
+    private RoleAssignmentRelationship user = null;
 
     /**
      * Get group
      * @return group
      */
-    public ToOneRelationship getGroup() {
+    public RoleAssignmentRelationship getGroup() {
         return group;
     }
 
-    public void setGroup(final ToOneRelationship group) {
+    public void setGroup(final RoleAssignmentRelationship group) {
         this.group = group;
     }
 
@@ -58,11 +55,11 @@ public class RoleAssignmentRelationships extends PolarisComponent {
      * Get organization
      * @return organization
      */
-    public ToOneRelationship getOrganization() {
+    public RoleAssignmentRelationship getOrganization() {
         return organization;
     }
 
-    public void setOrganization(final ToOneRelationship organization) {
+    public void setOrganization(final RoleAssignmentRelationship organization) {
         this.organization = organization;
     }
 
@@ -70,11 +67,11 @@ public class RoleAssignmentRelationships extends PolarisComponent {
      * Get role
      * @return role
      */
-    public ToOneRelationship getRole() {
+    public RoleAssignmentRelationship getRole() {
         return role;
     }
 
-    public void setRole(final ToOneRelationship role) {
+    public void setRole(final RoleAssignmentRelationship role) {
         this.role = role;
     }
 
@@ -82,11 +79,11 @@ public class RoleAssignmentRelationships extends PolarisComponent {
      * Get user
      * @return user
      */
-    public ToOneRelationship getUser() {
+    public RoleAssignmentRelationship getUser() {
         return user;
     }
 
-    public void setUser(final ToOneRelationship user) {
+    public void setUser(final RoleAssignmentRelationship user) {
         this.user = user;
     }
 

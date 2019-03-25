@@ -3,115 +3,115 @@ public class {{classname}} {{#parent}}extends {{{parent}}} {{/parent}}{{^parent}
 {{#vars}}
     {{#isEnum}}
         {{^isContainer}}
-{{>modelInnerEnum}}
+            {{>modelInnerEnum}}
         {{/isContainer}}
     {{/isEnum}}
     {{#items.isEnum}}
         {{#items}}
             {{^isContainer}}
-{{>modelInnerEnum}}
+                {{>modelInnerEnum}}
             {{/isContainer}}
         {{/items}}
     {{/items.isEnum}}
     {{#jackson}}
-    @JsonProperty("{{baseName}}")
+        @JsonProperty("{{baseName}}")
         {{#withXml}}
             {{^isContainer}}
-    @JacksonXmlProperty({{#isXmlAttribute}}isAttribute = true, {{/isXmlAttribute}}{{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}localName = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
+                @JacksonXmlProperty({{#isXmlAttribute}}isAttribute = true, {{/isXmlAttribute}}{{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}localName = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
             {{/isContainer}}
             {{#isContainer}}
                 {{#isXmlWrapped}}
-    // items.xmlName={{items.xmlName}}
-    @JacksonXmlElementWrapper(useWrapping = {{isXmlWrapped}}, {{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}localName = "{{#items.xmlName}}{{items.xmlName}}{{/items.xmlName}}{{^items.xmlName}}{{items.baseName}}{{/items.xmlName}}")
+                    // items.xmlName={{items.xmlName}}
+                    @JacksonXmlElementWrapper(useWrapping = {{isXmlWrapped}}, {{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}localName = "{{#items.xmlName}}{{items.xmlName}}{{/items.xmlName}}{{^items.xmlName}}{{items.baseName}}{{/items.xmlName}}")
                 {{/isXmlWrapped}}
             {{/isContainer}}
         {{/withXml}}
     {{/jackson}}
     {{#withXml}}
         {{#isXmlAttribute}}
-    @XmlAttribute(name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
+            @XmlAttribute(name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
         {{/isXmlAttribute}}
         {{^isXmlAttribute}}
             {{^isContainer}}
-    @XmlElement({{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
+                @XmlElement({{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
             {{/isContainer}}
             {{#isContainer}}
-    // Is a container wrapped={{isXmlWrapped}}
+                // Is a container wrapped={{isXmlWrapped}}
                 {{#items}}
-    // items.name={{name}} items.baseName={{baseName}} items.xmlName={{xmlName}} items.xmlNamespace={{xmlNamespace}}
-    // items.example={{example}} items.type={{datatype}}
-    @XmlElement({{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
+                    // items.name={{name}} items.baseName={{baseName}} items.xmlName={{xmlName}} items.xmlNamespace={{xmlNamespace}}
+                    // items.example={{example}} items.paramType={{datatype}}
+                    @XmlElement({{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
                 {{/items}}
                 {{#isXmlWrapped}}
-    @XmlElementWrapper({{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
+                    @XmlElementWrapper({{#xmlNamespace}}namespace="{{xmlNamespace}}", {{/xmlNamespace}}name = "{{#xmlName}}{{xmlName}}{{/xmlName}}{{^xmlName}}{{baseName}}{{/xmlName}}")
                 {{/isXmlWrapped}}
             {{/isContainer}}
         {{/isXmlAttribute}}
     {{/withXml}}
     {{#gson}}
-    @SerializedName("{{baseName}}")
+        @SerializedName("{{baseName}}")
     {{/gson}}
     {{#isContainer}}
-     private {{{datatypeWithEnum}}} {{name}}{{#required}} = {{{defaultValue}}}{{/required}}{{^required}} = null{{/required}};
+        private {{{datatypeWithEnum}}} {{name}}{{#required}} = {{{defaultValue}}}{{/required}}{{^required}} = null{{/required}};
     {{/isContainer}}
     {{^isContainer}}
-    private {{{datatypeWithEnum}}} {{name}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}};
+        private {{{datatypeWithEnum}}} {{name}}{{#defaultValue}} = {{{defaultValue}}}{{/defaultValue}};
     {{/isContainer}}
 
 {{/vars}}
 {{#vars}}
     {{^isReadOnly}}
         {{#isListContainer}}
-    public {{classname}} add{{nameInCamelCase}}Item({{{items.datatypeWithEnum}}} {{name}}Item) {
-        {{^required}}
-        if (this.{{name}} == null) {
-            this.{{name}} = {{{defaultValue}}};
-        }
-        {{/required}}
-        this.{{name}}.add({{name}}Item);
-        return this;
-    }
+            public {{classname}} add{{nameInCamelCase}}Item({{{items.datatypeWithEnum}}} {{name}}Item) {
+            {{^required}}
+                if (this.{{name}} == null) {
+                this.{{name}} = {{{defaultValue}}};
+                }
+            {{/required}}
+            this.{{name}}.add({{name}}Item);
+            return this;
+            }
 
         {{/isListContainer}}
         {{#isMapContainer}}
-    public {{classname}} put{{nameInCamelCase}}Item(String key, {{{items.datatypeWithEnum}}} {{name}}Item) {
+            public {{classname}} put{{nameInCamelCase}}Item(String key, {{{items.datatypeWithEnum}}} {{name}}Item) {
             {{^required}}
-        if (this.{{name}} == null) {
-            this.{{name}} = {{{defaultValue}}};
-        }
+                if (this.{{name}} == null) {
+                this.{{name}} = {{{defaultValue}}};
+                }
             {{/required}}
-        this.{{name}}.put(key, {{name}}Item);
-        return this;
-    }
+            this.{{name}}.put(key, {{name}}Item);
+            return this;
+            }
 
         {{/isMapContainer}}
     {{/isReadOnly}}
     /**
     {{#description}}
-     * {{description}}
+        * {{description}}
     {{/description}}
     {{^description}}
-     * Get {{name}}
+        * Get {{name}}
     {{/description}}
     {{#minimum}}
-     * minimum: {{minimum}}
+        * minimum: {{minimum}}
     {{/minimum}}
     {{#maximum}}
-     * maximum: {{maximum}}
+        * maximum: {{maximum}}
     {{/maximum}}
-     * @return {{name}}
-     */
+    * @return {{name}}
+    */
     {{#vendorExtensions.extraAnnotation}}
         {{{vendorExtensions.extraAnnotation}}}
     {{/vendorExtensions.extraAnnotation}}
     public {{{datatypeWithEnum}}} {{getter}}() {
-        return {{name}};
+    return {{name}};
     }
 
     {{^isReadOnly}}
-    public void {{setter}}({{{datatypeWithEnum}}} {{name}}) {
+        public void {{setter}}({{{datatypeWithEnum}}} {{name}}) {
         this.{{name}} = {{name}};
-    }
+        }
 
     {{/isReadOnly}}
 {{/vars}}
