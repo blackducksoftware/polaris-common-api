@@ -21,17 +21,33 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.auth.model.role;
 
+import java.util.List;
+
+import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
-import java.util.Objects;
-import java.util.Arrays;
+public class RolePermissions extends PolarisComponent {
+    @SerializedName("ORGANIZATION")
+    private List<String> organization;
+    @SerializedName("PROJECT")
+    private List<String> project;
 
-import io.swagger.annotations.ApiModel;
+    public List<String> getOrganization() {
+        return organization;
+    }
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+    public void setOrganization(final List<String> organization) {
+        this.organization = organization;
+    }
 
-public class RoleRelationships extends PolarisComponent {
+    public List<String> getProject() {
+        return project;
+    }
+
+    public void setProject(final List<String> project) {
+        this.project = project;
+    }
+
 }
-

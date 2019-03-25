@@ -21,40 +21,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.auth.model.role;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
-import com.google.gson.annotations.SerializedName;
-
-import java.util.ArrayList;
-import java.util.List;
-
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class RoleResources extends PolarisComponent {
-    @SerializedName("data")
-    private List<Role> data = null;
-
-    public RoleResources addDataItem(final Role dataItem) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(dataItem);
-        return this;
-    }
-
-    /**
-     * Get data
-     * @return data
-     */
-    public List<Role> getData() {
-        return data;
-    }
-
-    public void setData(final List<Role> data) {
-        this.data = data;
-    }
-
+public class RoleRelationships extends PolarisRelationships {
 }
 

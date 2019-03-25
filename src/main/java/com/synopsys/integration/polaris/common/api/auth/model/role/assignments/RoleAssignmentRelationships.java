@@ -24,30 +24,31 @@
 package com.synopsys.integration.polaris.common.api.auth.model.role.assignments;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisRelationshipSingle;
 import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
 public class RoleAssignmentRelationships extends PolarisRelationships {
     @SerializedName("group")
-    private RoleAssignmentRelationship group = null;
+    private PolarisRelationshipSingle group = null;
 
     @SerializedName("organization")
-    private RoleAssignmentRelationship organization = null;
+    private PolarisRelationshipSingle organization = null;
 
     @SerializedName("role")
-    private RoleAssignmentRelationship role = null;
+    private PolarisRelationshipSingle role = null;
 
     @SerializedName("user")
-    private RoleAssignmentRelationship user = null;
+    private PolarisRelationshipSingle user = null;
 
     /**
      * Get group
      * @return group
      */
-    public RoleAssignmentRelationship getGroup() {
+    public PolarisRelationshipSingle getGroup() {
         return group;
     }
 
-    public void setGroup(final RoleAssignmentRelationship group) {
+    public void setGroup(final PolarisRelationshipSingle group) {
         this.group = group;
     }
 
@@ -55,11 +56,11 @@ public class RoleAssignmentRelationships extends PolarisRelationships {
      * Get organization
      * @return organization
      */
-    public RoleAssignmentRelationship getOrganization() {
+    public PolarisRelationshipSingle getOrganization() {
         return organization;
     }
 
-    public void setOrganization(final RoleAssignmentRelationship organization) {
+    public void setOrganization(final PolarisRelationshipSingle organization) {
         this.organization = organization;
     }
 
@@ -67,11 +68,11 @@ public class RoleAssignmentRelationships extends PolarisRelationships {
      * Get role
      * @return role
      */
-    public RoleAssignmentRelationship getRole() {
+    public PolarisRelationshipSingle getRole() {
         return role;
     }
 
-    public void setRole(final RoleAssignmentRelationship role) {
+    public void setRole(final PolarisRelationshipSingle role) {
         this.role = role;
     }
 
@@ -79,11 +80,11 @@ public class RoleAssignmentRelationships extends PolarisRelationships {
      * Get user
      * @return user
      */
-    public RoleAssignmentRelationship getUser() {
+    public PolarisRelationshipSingle getUser() {
         return user;
     }
 
-    public void setUser(final RoleAssignmentRelationship user) {
+    public void setUser(final PolarisRelationshipSingle user) {
         this.user = user;
     }
 

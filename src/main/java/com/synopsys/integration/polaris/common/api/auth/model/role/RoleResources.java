@@ -21,22 +21,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model.role.assignments;
+package com.synopsys.integration.polaris.common.api.auth.model.role;
 
-import java.util.Optional;
+import com.synopsys.integration.polaris.common.api.PolarisResources;
 
-import com.synopsys.integration.polaris.common.api.PolarisRelationship;
-import com.synopsys.integration.polaris.common.api.PolarisResourceSparse;
-
-public class RoleAssignmentRelationship extends PolarisRelationship {
-    private PolarisResourceSparse data;
-
-    public Optional<PolarisResourceSparse> getData() {
-        return Optional.ofNullable(data);
-    }
-
-    public void setData(final PolarisResourceSparse data) {
-        this.data = data;
-    }
-
+public class RoleResources extends PolarisResources<RoleResource> {
 }
+

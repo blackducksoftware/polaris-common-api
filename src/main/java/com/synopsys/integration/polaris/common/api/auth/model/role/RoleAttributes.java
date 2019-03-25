@@ -21,25 +21,25 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
-
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-import com.google.gson.annotations.SerializedName;
+package com.synopsys.integration.polaris.common.api.auth.model.role;
 
 import java.util.HashMap;
 import java.util.Map;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 
-public class RoleAttributes extends PolarisComponent {
+public class RoleAttributes extends PolarisAttributes {
+    public static final String ROLE_ADMINISTRATOR = "Administrator";
+    public static final String ROLE_CONTRIBUTOR = "Contributor";
+
     @SerializedName("permissions")
-    private Map<String, Object> permissions = new HashMap<>();
+    private Map<String, RolePermissions> permissions = new HashMap<>();
 
     @SerializedName("rolename")
     private String rolename;
 
-    public RoleAttributes putPermissionsItem(final String key, final Object permissionsItem) {
+    public RoleAttributes putPermissionsItem(final String key, final RolePermissions permissionsItem) {
         this.permissions.put(key, permissionsItem);
         return this;
     }
@@ -48,11 +48,11 @@ public class RoleAttributes extends PolarisComponent {
      * Get permissions
      * @return permissions
      */
-    public Map<String, Object> getPermissions() {
+    public Map<String, RolePermissions> getPermissions() {
         return permissions;
     }
 
-    public void setPermissions(final Map<String, Object> permissions) {
+    public void setPermissions(final Map<String, RolePermissions> permissions) {
         this.permissions = permissions;
     }
 
