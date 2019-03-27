@@ -11,7 +11,7 @@ project.ext.moduleName = 'com.synopsys.integration.polaris-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
 group = 'com.synopsys.integration'
-version = '0.0.6-SNAPSHOT'
+version = '0.0.6'
 description = 'A library of mostly generated request/response classes for the Polaris REST API.'
 
 apply plugin: 'com.blackducksoftware.integration.library'
