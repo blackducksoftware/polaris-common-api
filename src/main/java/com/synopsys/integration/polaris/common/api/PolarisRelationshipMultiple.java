@@ -21,40 +21,23 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-import com.google.gson.annotations.SerializedName;
-
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+public class PolarisRelationshipMultiple extends PolarisRelationship {
+    private List<PolarisResourceSparse> data;
 
-public class GroupResources extends PolarisComponent {
-    @SerializedName("data")
-    private List<Group> data = null;
-
-    public GroupResources addDataItem(final Group dataItem) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
+    public List<PolarisResourceSparse> getData() {
+        if (null != data) {
+            return data;
         }
-        this.data.add(dataItem);
-        return this;
+        return Arrays.asList();
     }
 
-    /**
-     * Get data
-     * @return data
-     */
-    public List<Group> getData() {
-        return data;
-    }
-
-    public void setData(final List<Group> data) {
+    public void setData(final List<PolarisResourceSparse> data) {
         this.data = data;
     }
 
 }
-

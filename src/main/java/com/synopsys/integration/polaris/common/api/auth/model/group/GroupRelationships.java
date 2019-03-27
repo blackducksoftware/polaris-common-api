@@ -21,36 +21,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
-
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+package com.synopsys.integration.polaris.common.api.auth.model.group;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisRelationship;
+import com.synopsys.integration.polaris.common.api.PolarisRelationshipMultiple;
+import com.synopsys.integration.polaris.common.api.PolarisRelationshipSingle;
+import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
-// this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
-
-public class GroupRelationships extends PolarisComponent {
+public class GroupRelationships extends PolarisRelationships {
     @SerializedName("ancestors")
-    private ToManyRelationship ancestors = null;
+    private PolarisRelationshipMultiple ancestors = null;
 
     @SerializedName("children")
-    private ToManyRelationship children = null;
+    private PolarisRelationship children = null;
 
     @SerializedName("organization")
-    private ToOneRelationship organization = null;
+    private PolarisRelationshipSingle organization = null;
 
     @SerializedName("parent")
-    private ToOneRelationship parent = null;
+    private PolarisRelationshipSingle parent = null;
 
     /**
      * Get ancestors
      * @return ancestors
      */
-    public ToManyRelationship getAncestors() {
+    public PolarisRelationshipMultiple getAncestors() {
         return ancestors;
     }
 
-    public void setAncestors(final ToManyRelationship ancestors) {
+    public void setAncestors(final PolarisRelationshipMultiple ancestors) {
         this.ancestors = ancestors;
     }
 
@@ -58,11 +58,11 @@ public class GroupRelationships extends PolarisComponent {
      * Get children
      * @return children
      */
-    public ToManyRelationship getChildren() {
+    public PolarisRelationship getChildren() {
         return children;
     }
 
-    public void setChildren(final ToManyRelationship children) {
+    public void setChildren(final PolarisRelationship children) {
         this.children = children;
     }
 
@@ -70,11 +70,11 @@ public class GroupRelationships extends PolarisComponent {
      * Get organization
      * @return organization
      */
-    public ToOneRelationship getOrganization() {
+    public PolarisRelationshipSingle getOrganization() {
         return organization;
     }
 
-    public void setOrganization(final ToOneRelationship organization) {
+    public void setOrganization(final PolarisRelationshipSingle organization) {
         this.organization = organization;
     }
 
@@ -82,11 +82,11 @@ public class GroupRelationships extends PolarisComponent {
      * Get parent
      * @return parent
      */
-    public ToOneRelationship getParent() {
+    public PolarisRelationshipSingle getParent() {
         return parent;
     }
 
-    public void setParent(final ToOneRelationship parent) {
+    public void setParent(final PolarisRelationshipSingle parent) {
         this.parent = parent;
     }
 

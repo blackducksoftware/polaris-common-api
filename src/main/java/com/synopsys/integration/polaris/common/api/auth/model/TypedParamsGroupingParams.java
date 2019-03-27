@@ -23,12 +23,11 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-import com.google.gson.annotations.SerializedName;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 

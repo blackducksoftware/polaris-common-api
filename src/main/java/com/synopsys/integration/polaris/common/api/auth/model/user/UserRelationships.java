@@ -25,6 +25,8 @@ package com.synopsys.integration.polaris.common.api.auth.model.user;
 
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisRelationship;
+import com.synopsys.integration.polaris.common.api.PolarisRelationshipMultiple;
+import com.synopsys.integration.polaris.common.api.PolarisRelationshipSingle;
 import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
 public class UserRelationships extends PolarisRelationships {
@@ -35,11 +37,11 @@ public class UserRelationships extends PolarisRelationships {
     @SerializedName("githublogins")
     private PolarisRelationship githublogins = null;
     @SerializedName("groups")
-    private PolarisRelationship groups = null;
+    private PolarisRelationshipMultiple groups = null;
     @SerializedName("microsoftlogins")
     private PolarisRelationship microsoftlogins = null;
     @SerializedName("organization")
-    private PolarisRelationship organization = null;
+    private PolarisRelationshipSingle organization = null;
 
     /**
      * Get emailDetails
@@ -81,11 +83,11 @@ public class UserRelationships extends PolarisRelationships {
      * Get groups
      * @return groups
      */
-    public PolarisRelationship getGroups() {
+    public PolarisRelationshipMultiple getGroups() {
         return groups;
     }
 
-    public void setGroups(final PolarisRelationship groups) {
+    public void setGroups(final PolarisRelationshipMultiple groups) {
         this.groups = groups;
     }
 
@@ -105,11 +107,11 @@ public class UserRelationships extends PolarisRelationships {
      * Get organization
      * @return organization
      */
-    public PolarisRelationship getOrganization() {
+    public PolarisRelationshipSingle getOrganization() {
         return organization;
     }
 
-    public void setOrganization(final PolarisRelationship organization) {
+    public void setOrganization(final PolarisRelationshipSingle organization) {
         this.organization = organization;
     }
 
