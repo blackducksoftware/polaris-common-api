@@ -20,30 +20,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common.model;
+package com.synopsys.integration.polaris.common.api.job.model;
 
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ObjectContainer extends PolarisComponent {
-    @SerializedName("type")
-    private String type;
+public class JobLog extends PolarisComponent {
+    @SerializedName("attributes")
+    private JobLogAttributes attributes = null;
 
     @SerializedName("id")
     private String id;
 
+    @SerializedName("relationships")
+    private JobLogRelationships relationships = null;
+
+    @SerializedName("type")
+    private String type;
+
     /**
-     * Get type
-     * @return type
+     * Get attributes
+     * @return attributes
      */
-    public String getType() {
-        return type;
+    public JobLogAttributes getAttributes() {
+        return attributes;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setAttributes(JobLogAttributes attributes) {
+        this.attributes = attributes;
     }
 
     /**
@@ -56,6 +62,30 @@ public class ObjectContainer extends PolarisComponent {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    /**
+     * Get relationships
+     * @return relationships
+     */
+    public JobLogRelationships getRelationships() {
+        return relationships;
+    }
+
+    public void setRelationships(JobLogRelationships relationships) {
+        this.relationships = relationships;
+    }
+
+    /**
+     * Get type
+     * @return type
+     */
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
 }

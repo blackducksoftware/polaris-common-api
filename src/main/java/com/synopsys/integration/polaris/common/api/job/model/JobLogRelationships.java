@@ -20,29 +20,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.job.model;
 
-import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-import com.synopsys.integration.polaris.common.api.common.model.ToOneRelationship;
+import com.synopsys.integration.polaris.common.api.PolarisRelationships;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class LicenseJsonApiRelationships extends PolarisComponent {
-    @SerializedName("organization")
-    private ToOneRelationship organization = null;
-
-    /**
-     * Get organization
-     * @return organization
-     */
-    public ToOneRelationship getOrganization() {
-        return organization;
-    }
-
-    public void setOrganization(final ToOneRelationship organization) {
-        this.organization = organization;
-    }
-
+public class JobLogRelationships extends PolarisRelationships {
 }
-

@@ -20,29 +20,58 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.job.model;
+
+import java.time.OffsetDateTime;
 
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
-import com.synopsys.integration.polaris.common.api.common.model.ToOneRelationship;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class LicenseJsonApiRelationships extends PolarisComponent {
-    @SerializedName("organization")
-    private ToOneRelationship organization = null;
+public class CompleteMultipartDescriptor extends PolarisComponent {
+    @SerializedName("url")
+    private String url;
+
+    @SerializedName("created")
+    private OffsetDateTime created;
+
+    @SerializedName("expiration")
+    private OffsetDateTime expiration;
+
+    @SerializedName("uploadId")
+    private String uploadId;
 
     /**
-     * Get organization
-     * @return organization
+     * Get url
+     * @return url
      */
-    public ToOneRelationship getOrganization() {
-        return organization;
+    public String getUrl() {
+        return url;
     }
 
-    public void setOrganization(final ToOneRelationship organization) {
-        this.organization = organization;
+    /**
+     * Get created
+     * @return created
+     */
+    public OffsetDateTime getCreated() {
+        return created;
+    }
+
+    /**
+     * Get expiration
+     * @return expiration
+     */
+    public OffsetDateTime getExpiration() {
+        return expiration;
+    }
+
+    /**
+     * Get uploadId
+     * @return uploadId
+     */
+    public String getUploadId() {
+        return uploadId;
     }
 
 }
-

@@ -20,37 +20,27 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
-
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+package com.synopsys.integration.polaris.common.api.job.model;
 
 import com.google.gson.annotations.SerializedName;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.synopsys.integration.polaris.common.api.PolarisResource;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ToManyRelationship extends PolarisComponent {
+public class JobLogResource extends PolarisResource<JobLogAttributes, JobLogRelationships> {
     @SerializedName("data")
-    private List<ObjectContainer> data = new ArrayList<>();
-
-    public ToManyRelationship addDataItem(final ObjectContainer dataItem) {
-        this.data.add(dataItem);
-        return this;
-    }
+    private JobLog data = null;
 
     /**
      * Get data
      * @return data
      */
-    public List<ObjectContainer> getData() {
+    public JobLog getData() {
         return data;
     }
 
-    public void setData(final List<ObjectContainer> data) {
+    public void setData(JobLog data) {
         this.data = data;
     }
 
 }
-

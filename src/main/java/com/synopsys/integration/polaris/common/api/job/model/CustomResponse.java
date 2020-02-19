@@ -20,29 +20,42 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.job.model;
 
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
-import com.synopsys.integration.polaris.common.api.common.model.ToOneRelationship;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class LicenseJsonApiRelationships extends PolarisComponent {
-    @SerializedName("organization")
-    private ToOneRelationship organization = null;
+public class CustomResponse extends PolarisComponent {
+    @SerializedName("success")
+    private Boolean success;
+
+    @SerializedName("message")
+    private String message;
 
     /**
-     * Get organization
-     * @return organization
+     * Get success
+     * @return success
      */
-    public ToOneRelationship getOrganization() {
-        return organization;
+    public Boolean getSuccess() {
+        return success;
     }
 
-    public void setOrganization(final ToOneRelationship organization) {
-        this.organization = organization;
+    public void setSuccess(Boolean success) {
+        this.success = success;
+    }
+
+    /**
+     * Get message
+     * @return message
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 }
-

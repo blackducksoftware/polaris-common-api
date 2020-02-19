@@ -20,29 +20,22 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.job.model;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-import com.synopsys.integration.polaris.common.api.common.model.ToOneRelationship;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class LicenseJsonApiRelationships extends PolarisComponent {
-    @SerializedName("organization")
-    private ToOneRelationship organization = null;
+public class CustomMultipartUploadDescriptor extends S3UploadDescriptor {
+    @SerializedName("multiPartSignerUrl")
+    private String multiPartSignerUrl;
 
     /**
-     * Get organization
-     * @return organization
+     * Get multiPartSignerUrl
+     * @return multiPartSignerUrl
      */
-    public ToOneRelationship getOrganization() {
-        return organization;
-    }
-
-    public void setOrganization(final ToOneRelationship organization) {
-        this.organization = organization;
+    public String getMultiPartSignerUrl() {
+        return multiPartSignerUrl;
     }
 
 }
-

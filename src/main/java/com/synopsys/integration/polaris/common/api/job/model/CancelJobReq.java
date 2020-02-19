@@ -20,29 +20,37 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.job.model;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
-import com.synopsys.integration.polaris.common.api.common.model.ToOneRelationship;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
+public class CancelJobReq extends PolarisComponent {
+    @SerializedName("jobIds")
+    private List<String> jobIds = null;
 
-public class LicenseJsonApiRelationships extends PolarisComponent {
-    @SerializedName("organization")
-    private ToOneRelationship organization = null;
-
-    /**
-     * Get organization
-     * @return organization
-     */
-    public ToOneRelationship getOrganization() {
-        return organization;
+    public CancelJobReq addJobIdsItem(String jobIdsItem) {
+        if (this.jobIds == null) {
+            this.jobIds = new ArrayList<>();
+        }
+        this.jobIds.add(jobIdsItem);
+        return this;
     }
 
-    public void setOrganization(final ToOneRelationship organization) {
-        this.organization = organization;
+    /**
+     * Get jobIds
+     * @return jobIds
+     */
+    public List<String> getJobIds() {
+        return jobIds;
+    }
+
+    public void setJobIds(List<String> jobIds) {
+        this.jobIds = jobIds;
     }
 
 }
-

@@ -20,55 +20,28 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.common.model;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-import java.util.Objects;
-import java.util.Arrays;
-
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
-import java.io.IOException;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
+import com.synopsys.integration.polaris.common.api.auth.model.APIToken;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ObjectContainer extends PolarisComponent {
-    @SerializedName("type")
-    private String type;
-
-    @SerializedName("id")
-    private String id;
+public class InlineObject extends PolarisComponent {
+    @SerializedName("data")
+    private APIToken data = null;
 
     /**
-     * Get type
-     * @return type
+     * Get data
+     * @return data
      */
-    public String getType() {
-        return type;
+    public APIToken getData() {
+        return data;
     }
 
-    public void setType(final String type) {
-        this.type = type;
-    }
-
-    /**
-     * Get id
-     * @return id
-     */
-    public String getId() {
-        return id;
-    }
-
-    public void setId(final String id) {
-        this.id = id;
+    public void setData(final APIToken data) {
+        this.data = data;
     }
 
 }

@@ -20,29 +20,57 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.job.model;
+
+import java.util.Map;
 
 import com.google.gson.annotations.SerializedName;
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-import com.synopsys.integration.polaris.common.api.common.model.ToOneRelationship;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class LicenseJsonApiRelationships extends PolarisComponent {
-    @SerializedName("organization")
-    private ToOneRelationship organization = null;
+public class RoleAssumerS3UploadDescriptor extends S3UploadDescriptor {
+    @SerializedName("awsAccessKey")
+    private String awsAccessKey;
+
+    @SerializedName("awsSecretKey")
+    private String awsSecretKey;
+
+    @SerializedName("sessionToken")
+    private String sessionToken;
+
+    @SerializedName("headers")
+    private Map<String, String> headers = null;
 
     /**
-     * Get organization
-     * @return organization
+     * Get awsAccessKey
+     * @return awsAccessKey
      */
-    public ToOneRelationship getOrganization() {
-        return organization;
+    public String getAwsAccessKey() {
+        return awsAccessKey;
     }
 
-    public void setOrganization(final ToOneRelationship organization) {
-        this.organization = organization;
+    /**
+     * Get awsSecretKey
+     * @return awsSecretKey
+     */
+    public String getAwsSecretKey() {
+        return awsSecretKey;
+    }
+
+    /**
+     * Get sessionToken
+     * @return sessionToken
+     */
+    public String getSessionToken() {
+        return sessionToken;
+    }
+
+    /**
+     * Get headers
+     * @return headers
+     */
+    public Map<String, String> getHeaders() {
+        return headers;
     }
 
 }
-

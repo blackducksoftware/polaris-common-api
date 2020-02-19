@@ -20,19 +20,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.common.model;
+package com.synopsys.integration.polaris.common.api.job.model;
+
+import java.time.OffsetDateTime;
 
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ObjectContainer extends PolarisComponent {
+public class S3UploadDescriptor extends PolarisComponent {
     @SerializedName("type")
     private String type;
 
-    @SerializedName("id")
-    private String id;
+    @SerializedName("key")
+    private String key;
+
+    @SerializedName("url")
+    private String url;
+
+    @SerializedName("bucket")
+    private String bucket;
+
+    @SerializedName("pathStyleAccess")
+    private Boolean pathStyleAccess;
+
+    @SerializedName("region")
+    private String region;
+
+    @SerializedName("expiration")
+    private OffsetDateTime expiration;
 
     /**
      * Get type
@@ -42,20 +59,52 @@ public class ObjectContainer extends PolarisComponent {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    /**
+     * Get key
+     * @return key
+     */
+    public String getKey() {
+        return key;
     }
 
     /**
-     * Get id
-     * @return id
+     * Get url
+     * @return url
      */
-    public String getId() {
-        return id;
+    public String getUrl() {
+        return url;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    /**
+     * Get bucket
+     * @return bucket
+     */
+    public String getBucket() {
+        return bucket;
+    }
+
+    /**
+     * Get pathStyleAccess
+     * @return pathStyleAccess
+     */
+    public Boolean getPathStyleAccess() {
+        return pathStyleAccess;
+    }
+
+    /**
+     * Get region
+     * @return region
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * Get expiration
+     * @return expiration
+     */
+    public OffsetDateTime getExpiration() {
+        return expiration;
     }
 
 }

@@ -20,29 +20,23 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
-
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+package com.synopsys.integration.polaris.common.api.job.model;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ToOneRelationship extends PolarisComponent {
-    @SerializedName("data")
-    private ObjectContainer data = null;
+public class SubmissionFlavor extends PolarisComponent {
+    @SerializedName("kind")
+    private String kind;
 
     /**
-     * Get data
-     * @return data
+     * Get kind
+     * @return kind
      */
-    public ObjectContainer getData() {
-        return data;
-    }
-
-    public void setData(final ObjectContainer data) {
-        this.data = data;
+    public String getKind() {
+        return kind;
     }
 
 }
-

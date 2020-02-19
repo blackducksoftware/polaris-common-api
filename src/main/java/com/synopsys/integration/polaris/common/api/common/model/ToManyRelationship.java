@@ -20,27 +20,34 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.synopsys.integration.polaris.common.api.auth.model;
+package com.synopsys.integration.polaris.common.api.common.model;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
+import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class InlineObject extends PolarisComponent {
+public class ToManyRelationship extends PolarisComponent {
     @SerializedName("data")
-    private APIToken data = null;
+    private List<ObjectContainer> data = new ArrayList<>();
+
+    public ToManyRelationship addDataItem(final ObjectContainer dataItem) {
+        this.data.add(dataItem);
+        return this;
+    }
 
     /**
      * Get data
      * @return data
      */
-    public APIToken getData() {
+    public List<ObjectContainer> getData() {
         return data;
     }
 
-    public void setData(final APIToken data) {
+    public void setData(final List<ObjectContainer> data) {
         this.data = data;
     }
 
