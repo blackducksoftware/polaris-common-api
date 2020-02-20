@@ -22,8 +22,6 @@
  */
 package com.synopsys.integration.polaris.common.api.job.model;
 
-import java.util.UUID;
-
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
@@ -34,7 +32,7 @@ public class Job extends PolarisComponent {
     private JobAttributes attributes = null;
 
     @SerializedName("id")
-    private UUID id;
+    private String id;
 
     @SerializedName("relationships")
     private JobRelationships relationships = null;
@@ -58,11 +56,11 @@ public class Job extends PolarisComponent {
      * Get id
      * @return id
      */
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
