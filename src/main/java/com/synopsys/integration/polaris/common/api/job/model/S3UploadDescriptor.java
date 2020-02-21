@@ -22,8 +22,6 @@
  */
 package com.synopsys.integration.polaris.common.api.job.model;
 
-import java.time.OffsetDateTime;
-
 import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisComponent;
 
@@ -49,7 +47,7 @@ public class S3UploadDescriptor extends PolarisComponent {
     private String region;
 
     @SerializedName("expiration")
-    private OffsetDateTime expiration;
+    private String expiration;
 
     /**
      * Get type
@@ -103,7 +101,7 @@ public class S3UploadDescriptor extends PolarisComponent {
      * Get expiration
      * @return expiration
      */
-    public OffsetDateTime getExpiration() {
+    public String getExpiration() {
         return expiration;
     }
 

@@ -23,7 +23,6 @@
 package com.synopsys.integration.polaris.common.api.job.model;
 
 import java.io.IOException;
-import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,7 +43,7 @@ public class LifecycleEvent extends PolarisComponent {
     @SerializedName("context")
     private Map<String, String> context = new HashMap<>();
     @SerializedName("timestamp")
-    private OffsetDateTime timestamp;
+    private String timestamp;
 
     /**
      * Get id
@@ -78,7 +77,7 @@ public class LifecycleEvent extends PolarisComponent {
      * Get timestamp
      * @return timestamp
      */
-    public OffsetDateTime getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 

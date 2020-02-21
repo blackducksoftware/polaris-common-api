@@ -22,7 +22,6 @@
  */
 package com.synopsys.integration.polaris.common.api.job.model;
 
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -41,25 +40,25 @@ public class JobAttributes extends PolarisAttributes {
     private String branchName;
 
     @SerializedName("dateCancelled")
-    private OffsetDateTime dateCancelled;
+    private String dateCancelled;
 
     @SerializedName("dateCompleted")
-    private OffsetDateTime dateCompleted;
+    private String dateCompleted;
 
     @SerializedName("dateCreated")
-    private OffsetDateTime dateCreated;
+    private String dateCreated;
 
     @SerializedName("dateFailed")
-    private OffsetDateTime dateFailed;
+    private String dateFailed;
 
     @SerializedName("dateFinished")
-    private OffsetDateTime dateFinished;
+    private String dateFinished;
 
     @SerializedName("dateQueued")
-    private OffsetDateTime dateQueued;
+    private String dateQueued;
 
     @SerializedName("dateStarted")
-    private OffsetDateTime dateStarted;
+    private String dateStarted;
 
     @SerializedName("details")
     private Map<String, Object> details = null;
@@ -68,7 +67,7 @@ public class JobAttributes extends PolarisAttributes {
     private String diagnosticsKey;
 
     @SerializedName("expiryDate")
-    private OffsetDateTime expiryDate;
+    private String expiryDate;
 
     @SerializedName("failureInfo")
     private FailureInfo failureInfo = null;
@@ -148,11 +147,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get dateCancelled
      * @return dateCancelled
      */
-    public OffsetDateTime getDateCancelled() {
+    public String getDateCancelled() {
         return dateCancelled;
     }
 
-    public void setDateCancelled(OffsetDateTime dateCancelled) {
+    public void setDateCancelled(String dateCancelled) {
         this.dateCancelled = dateCancelled;
     }
 
@@ -160,11 +159,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get dateCompleted
      * @return dateCompleted
      */
-    public OffsetDateTime getDateCompleted() {
+    public String getDateCompleted() {
         return dateCompleted;
     }
 
-    public void setDateCompleted(OffsetDateTime dateCompleted) {
+    public void setDateCompleted(String dateCompleted) {
         this.dateCompleted = dateCompleted;
     }
 
@@ -172,11 +171,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get dateCreated
      * @return dateCreated
      */
-    public OffsetDateTime getDateCreated() {
+    public String getDateCreated() {
         return dateCreated;
     }
 
-    public void setDateCreated(OffsetDateTime dateCreated) {
+    public void setDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
     }
 
@@ -184,11 +183,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get dateFailed
      * @return dateFailed
      */
-    public OffsetDateTime getDateFailed() {
+    public String getDateFailed() {
         return dateFailed;
     }
 
-    public void setDateFailed(OffsetDateTime dateFailed) {
+    public void setDateFailed(String dateFailed) {
         this.dateFailed = dateFailed;
     }
 
@@ -196,11 +195,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get dateFinished
      * @return dateFinished
      */
-    public OffsetDateTime getDateFinished() {
+    public String getDateFinished() {
         return dateFinished;
     }
 
-    public void setDateFinished(OffsetDateTime dateFinished) {
+    public void setDateFinished(String dateFinished) {
         this.dateFinished = dateFinished;
     }
 
@@ -208,11 +207,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get dateQueued
      * @return dateQueued
      */
-    public OffsetDateTime getDateQueued() {
+    public String getDateQueued() {
         return dateQueued;
     }
 
-    public void setDateQueued(OffsetDateTime dateQueued) {
+    public void setDateQueued(String dateQueued) {
         this.dateQueued = dateQueued;
     }
 
@@ -220,11 +219,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get dateStarted
      * @return dateStarted
      */
-    public OffsetDateTime getDateStarted() {
+    public String getDateStarted() {
         return dateStarted;
     }
 
-    public void setDateStarted(OffsetDateTime dateStarted) {
+    public void setDateStarted(String dateStarted) {
         this.dateStarted = dateStarted;
     }
 
@@ -264,11 +263,11 @@ public class JobAttributes extends PolarisAttributes {
      * Get expiryDate
      * @return expiryDate
      */
-    public OffsetDateTime getExpiryDate() {
+    public String getExpiryDate() {
         return expiryDate;
     }
 
-    public void setExpiryDate(OffsetDateTime expiryDate) {
+    public void setExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
     }
 
