@@ -10,7 +10,7 @@ buildscript {
 project.ext.moduleName = 'com.synopsys.integration.polaris-common-api'
 project.ext.javaUseAutoModuleName = 'true'
 
-version = '0.0.11-SNAPSHOT'
+version = '0.0.11'
 description = 'A library of mostly generated request/response classes for the Polaris REST API.'
 
 apply plugin: 'com.synopsys.integration.library'
