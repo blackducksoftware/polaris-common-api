@@ -22,74 +22,10 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-import com.google.gson.annotations.SerializedName;
-
-import java.util.UUID;
+import com.synopsys.integration.polaris.common.api.PolarisResource;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class Context extends PolarisComponent {
-    @SerializedName("attributes")
-    private ContextAttributes attributes = null;
-
-    @SerializedName("id")
-    private UUID id;
-
-    @SerializedName("relationships")
-    private ContextRelationships relationships = null;
-
-    @SerializedName("type")
-    private String type;
-
-    /**
-     * Get attributes
-     * @return attributes
-     */
-    public ContextAttributes getAttributes() {
-        return attributes;
-    }
-
-    public void setAttributes(final ContextAttributes attributes) {
-        this.attributes = attributes;
-    }
-
-    /**
-     * Get id
-     * @return id
-     */
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(final UUID id) {
-        this.id = id;
-    }
-
-    /**
-     * Get relationships
-     * @return relationships
-     */
-    public ContextRelationships getRelationships() {
-        return relationships;
-    }
-
-    public void setRelationships(final ContextRelationships relationships) {
-        this.relationships = relationships;
-    }
-
-    /**
-     * Get type
-     * @return type
-     */
-    public String getType() {
-        return type;
-    }
-
-    public void setType(final String type) {
-        this.type = type;
-    }
-
+public class Context extends PolarisResource<ContextAttributes, ContextRelationships> {
 }
 
