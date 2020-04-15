@@ -22,37 +22,11 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.google.gson.annotations.SerializedName;
 import com.synopsys.integration.polaris.common.api.PolarisResources;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
 public class ContextResources extends PolarisResources<Context> {
-    @SerializedName("data")
-    private List<Context> data = null;
-
-    public ContextResources addDataItem(final Context dataItem) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(dataItem);
-        return this;
-    }
-
-    /**
-     * Get data
-     * @return data
-     */
-    public List<Context> getData() {
-        return data;
-    }
-
-    public void setData(final List<Context> data) {
-        this.data = data;
-    }
 
 }
 
