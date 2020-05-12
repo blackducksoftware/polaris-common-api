@@ -22,25 +22,12 @@
  */
 package com.synopsys.integration.polaris.common.api.auth.model;
 
-import com.synopsys.integration.polaris.common.api.PolarisComponent;
-
-import java.util.Objects;
-import java.util.Arrays;
-
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
-import java.io.IOException;
+import com.synopsys.integration.polaris.common.api.PolarisAttributes;
 
 // this file should not be edited - if changes are necessary, the generator should be updated, then this file should be re-created
 
-public class ContextAttributes extends PolarisComponent {
+public class ContextAttributes extends PolarisAttributes {
     @SerializedName("current")
     private Boolean current;
 
